@@ -1,7 +1,7 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 import { waitFor } from '@testing-library/react'
-import { fillTip, getBookmarkButton, getCategorySelect, getSearchBox, getSortSelect, getTipFields, renderLoadedApp } from '../test/helpers'
-import { ANALYTICS_MESSAGE, VALID_TIP } from '../test/fixtures'
+import { fillStory, getBookmarkButton, getCategorySelect, getSearchBox, getSortSelect, getStoryFields, renderLoadedApp } from '../test/helpers'
+import { ANALYTICS_MESSAGE, VALID_STORY } from '../test/fixtures'
 
 let logSpy
 const analyticsCount = () => logSpy.mock.calls.filter((args) => args[0] === ANALYTICS_MESSAGE).length
@@ -43,9 +43,9 @@ describe('Telemetry (NFR) — "[Analytics] User interacted with Performance Opti
     expect(analyticsCount()).toBe(2)
   })
 
-  it('logs once when a valid tip is submitted successfully', async () => {
+  it('logs once when a valid story is submitted successfully', async () => {
     const { user } = await renderLoadedApp()
-    const { submit } = await fillTip(user, VALID_TIP)
+    const { submit } = await fillStory(user, VALID_STORY)
     const before = analyticsCount()
     await user.click(submit)
     await waitFor(() => expect(analyticsCount()).toBe(before + 1))
@@ -53,7 +53,7 @@ describe('Telemetry (NFR) — "[Analytics] User interacted with Performance Opti
 
   it('does NOT log when validation blocks a submission (action not completed)', async () => {
     const { user } = await renderLoadedApp()
-    await user.click(getTipFields().submit)
+    await user.click(getStoryFields().submit)
     expect(analyticsCount()).toBe(0)
   })
 

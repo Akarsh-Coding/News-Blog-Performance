@@ -9,7 +9,19 @@ const cssSources = sources.filter(([path]) => path.endsWith('.css'))
 
 const declarations = (css, property) => [...css.matchAll(new RegExp(`^\\s*(${property})\\s*:\\s*([^;]+);`, 'gm'))]
 
+const tokensCss = Object.entries(import.meta.glob('../styles/tokens.css', { query: '?raw', import: 'default', eager: true }))[0][1]
+
 describe('Design system (ticket: no rogue colors, consistent 16px/32px spacing)', () => {
+  it('palette is grayscale, except for the red status family used for errors', () => {
+    const colors = [...tokensCss.matchAll(/--([a-z0-9-]+):\s*#([0-9a-fA-F]{6})\b/g)]
+    expect(colors.length).toBeGreaterThanOrEqual(7)
+    for (const [, name, hex] of colors) {
+      const [r, g, b] = [0, 2, 4].map((i) => hex.slice(i, i + 2))
+      const isGray = r === g && g === b
+      expect(isGray || name.startsWith('red-'), `--${name}: #${hex} must be gray (or part of the red-* error family)`).toBe(true)
+    }
+  })
+
   it('actually scans the component files (guards against a vacuous pass)', () => {
     expect(sources.length).toBeGreaterThanOrEqual(4)
   })

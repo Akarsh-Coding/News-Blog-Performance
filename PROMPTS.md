@@ -88,4 +88,21 @@ First run of `design-system.test.js` had 3 failures caused by a regex group offs
 
 ---
 
-<!-- Add Prompt #4 below -->
+### Prompt #4 — Unhappy-path implementation (Green, part 2)
+
+**Phase:** TDD: implement
+
+**Prompt:**
+> Make the Unhappy Path tests pass. (1) Empty state: when search or filters return zero articles, show a user-friendly "No data found" message. (2) Bad connectivity: load the articles through a simulated async fetch with a 2-3 second delay, and show a visible loading indicator, plus an error message with a retry button if the simulated request fails. (3) Invalid input: add a "Submit a Story" form with title, author email, and summary. Use custom regex validation, block submission when data is missing or malformed, and highlight the offending fields in red (using the design tokens) with an inline error message. Run the tests and show me the results.
+
+**What the AI did:**
+Added `src/api/newsApi.js` (simulated 2-3 s latency; `?simulate=error|offline` failure switches), `StoryForm` with regex rules in `validateStory.js`, loading / error+Retry / "No data found" states in `App`, and a red `--red-*` status token family (the only non-gray colors). Because the spec now named the form "Submit a Story" (title, author email, summary), the tests' placeholder "Submit a tip" form was renamed accordingly; assertions about behavior were unchanged. Added tests for request failure + retry, failed submission, title rules, the regexes, the latency window (fake timers) and an end-to-end simulated-3G test.
+
+**Outcome:** ✅ Worked — suites 1-5 fully green. Remaining red: telemetry, sanitization, memoization.
+
+**Notes / follow-up:**
+Test env sets `VITE_SIMULATE_BACKEND=false` so the suite has no real delays; the simulated path is covered by `newsApi.test.js` and `9-simulated-network.test.jsx`. Form state lives inside `StoryForm`, so typing there already doesn't re-render the article cards.
+
+---
+
+<!-- Add Prompt #5 below -->

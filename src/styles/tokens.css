@@ -1,5 +1,7 @@
 /*
- * Design tokens — monochromatic (grayscale only).
+ * Design tokens — monochromatic (grayscale), with ONE exception:
+ * a red status family used only to flag validation / request errors, as the
+ * ticket requires ("highlight the offending fields in red").
  *
  * RULE: this is the ONLY file allowed to contain raw color values.
  * Components use the semantic tokens below (var(--color-*)), and spacing /
@@ -17,6 +19,10 @@
   --gray-700: #4d4d4d; /* 8.5:1 on white: OK for body text */
   --gray-900: #141414;
 
+  /* ---- Status color: the only non-gray family (errors only) ---- */
+  --red-50: #fdf0ef;
+  --red-700: #b3261e; /* 6.5:1 on white, 5.8:1 on red-50 */
+
   /* ---- Semantic colors (what components should use) ---- */
   --color-bg: var(--gray-0);
   --color-surface: var(--gray-50);
@@ -28,6 +34,8 @@
   --color-inverse-bg: var(--gray-900);
   --color-inverse-text: var(--gray-0);
   --color-focus: var(--gray-900);
+  --color-danger: var(--red-700);
+  --color-danger-bg: var(--red-50);
 
   /* ---- Spacing: 16px / 32px steps ---- */
   --space-1: 16px;
@@ -49,10 +57,12 @@
 
   /* ---- Shape & sizing ---- */
   --border-width: 1px;
+  --border-width-strong: 2px;
   --radius: 4px;
   --focus-width: 2px;
   --focus-offset: 2px;
   --target-size: 48px; /* minimum touch target */
   --content-width: 1120px;
+  --aside-width: 352px;
   --card-min-width: 288px;
 }

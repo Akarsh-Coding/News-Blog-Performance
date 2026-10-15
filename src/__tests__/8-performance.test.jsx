@@ -1,5 +1,5 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest'
-import { enter, getBookmarkButton, getSearchBox, getTipFields, renderLoadedApp } from '../test/helpers'
+import { enter, getBookmarkButton, getSearchBox, getStoryFields, renderLoadedApp } from '../test/helpers'
 import { ARTICLES } from '../test/fixtures'
 
 /*
@@ -60,19 +60,19 @@ describe('Performance (NFR) — memoized children', () => {
     expect(Object.keys(cardRenders).sort()).toEqual(ARTICLES.map((a) => a.id).sort())
   })
 
-  it('does not re-render any card when unrelated state changes (typing in the tip form)', async () => {
+  it('does not re-render any card when unrelated state changes (typing in the story form)', async () => {
     const { user } = await renderLoadedApp()
     const baseline = { ...cardRenders }
-    await enter(user, getTipFields().name, 'Priya')
-    await enter(user, getTipFields().tip, 'Something newsworthy happened')
+    await enter(user, getStoryFields().title, 'Council budget story')
+    await enter(user, getStoryFields().summary, 'Something newsworthy happened')
     expect(cardRenders).toEqual(baseline)
   })
 
   it('does not re-render any card when validation errors appear', async () => {
     const { user } = await renderLoadedApp()
     const baseline = { ...cardRenders }
-    await user.click(getTipFields().submit)
-    expect(getTipFields().name).toHaveAttribute('aria-invalid', 'true')
+    await user.click(getStoryFields().submit)
+    expect(getStoryFields().title).toHaveAttribute('aria-invalid', 'true')
     expect(cardRenders).toEqual(baseline)
   })
 
@@ -94,13 +94,13 @@ describe('Performance (NFR) — memoized filtered-list computation', () => {
     expect(filterSpy).toHaveBeenCalled()
   })
 
-  it('does not re-run when unrelated state changes (tip form typing, validation errors)', async () => {
+  it('does not re-run when unrelated state changes (story form typing, validation errors)', async () => {
     const { user } = await renderLoadedApp()
     const baseline = filterSpy.mock.calls.length
     expect(baseline).toBeGreaterThan(0)
 
-    await enter(user, getTipFields().name, 'Priya')
-    await user.click(getTipFields().submit)
+    await enter(user, getStoryFields().title, 'Council budget story')
+    await user.click(getStoryFields().submit)
     expect(filterSpy).toHaveBeenCalledTimes(baseline)
   })
 

@@ -30,8 +30,8 @@ export const TITLES_A_TO_Z = [
   'Startup raises record funding',
 ]
 
-export const VALID_TIP = {
-  name: 'Priya Singh',
+export const VALID_STORY = {
+  title: 'Council meets behind closed doors',
   email: 'priya@example.com',
-  tip: 'The council is meeting behind closed doors tonight.',
+  summary: 'The council is meeting behind closed doors tonight to discuss the budget.',
 }

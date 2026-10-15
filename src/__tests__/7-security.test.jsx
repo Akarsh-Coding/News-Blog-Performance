@@ -1,7 +1,7 @@
 import { describe, expect, it, vi } from 'vitest'
 import { screen } from '@testing-library/react'
-import { enter, fillTip, getSearchBox, getTipFields, renderLoadedApp } from '../test/helpers'
-import { VALID_TIP, XSS_PAYLOAD } from '../test/fixtures'
+import { enter, fillStory, getSearchBox, getStoryFields, renderLoadedApp } from '../test/helpers'
+import { VALID_STORY, XSS_PAYLOAD } from '../test/fixtures'
 
 // A controlled <input> shows exactly what is held in state, so asserting on
 // input.value is how we verify "sanitized BEFORE it is stored in state".
@@ -43,20 +43,20 @@ describe('Security (NFR) — XSS sanitization of text inputs', () => {
     expect(getSearchBox()).toHaveValue('climate bill')
   })
 
-  it.each(['name', 'email', 'tip'])('sanitizes the "%s" field of the tip form', async (field) => {
+  it.each(['title', 'email', 'summary'])('sanitizes the "%s" field of the story form', async (field) => {
     const { user } = await renderLoadedApp()
-    await enter(user, getTipFields()[field], `${XSS_PAYLOAD}Bob`)
-    const value = getTipFields()[field].value
+    await enter(user, getStoryFields()[field], `${XSS_PAYLOAD}Bob`)
+    const value = getStoryFields()[field].value
     expect(hasNoMarkup(value)).toBe(true)
     if (field !== 'email') expect(value).toContain('Bob') // real text survives
   })
 
   it('never sends markup to the server', async () => {
     const { user, postCalls } = await renderLoadedApp()
-    const { submit } = await fillTip(user, {
-      name: `${XSS_PAYLOAD}Priya`,
-      email: VALID_TIP.email,
-      tip: `${XSS_PAYLOAD}The council is meeting tonight.`,
+    const { submit } = await fillStory(user, {
+      title: `${XSS_PAYLOAD}Council budget story`,
+      email: VALID_STORY.email,
+      summary: `${XSS_PAYLOAD}The council is meeting tonight to vote.`,
     })
     await user.click(submit)
 

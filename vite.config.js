@@ -9,5 +9,7 @@ export default defineConfig({
     globals: true,
     setupFiles: './src/test/setup.js',
     css: true,
+    // Tests use the plain fetch path: no simulated 2-3 s latency.
+    env: { VITE_SIMULATE_BACKEND: 'false' },
   },
 })

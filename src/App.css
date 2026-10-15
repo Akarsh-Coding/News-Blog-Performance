@@ -64,3 +64,97 @@
   padding: 0;
   list-style: none;
 }
+
+.field__control--textarea {
+  padding: var(--space-1);
+  resize: vertical;
+}
+
+/* Invalid fields: red border (thickened without shifting layout) + inline message. */
+.field__control--error {
+  border-color: var(--color-danger);
+  background: var(--color-danger-bg);
+  box-shadow: 0 0 0 var(--border-width) var(--color-danger);
+}
+
+.field__error {
+  margin: 0;
+  color: var(--color-danger);
+  font-size: var(--font-size-1);
+  font-weight: var(--font-weight-bold);
+}
+
+.button {
+  min-height: var(--target-size);
+  padding: 0 var(--space-2);
+  border: var(--border-width) solid var(--color-inverse-bg);
+  border-radius: var(--radius);
+  background: var(--color-inverse-bg);
+  color: var(--color-inverse-text);
+  font: inherit;
+  font-weight: var(--font-weight-bold);
+  cursor: pointer;
+}
+
+.button:disabled {
+  border-color: var(--color-border);
+  background: var(--color-border);
+  cursor: not-allowed;
+}
+
+.status {
+  margin: 0 0 var(--space-1);
+  padding: var(--space-1);
+  border: var(--border-width) solid var(--color-border-subtle);
+  border-radius: var(--radius);
+  background: var(--color-surface);
+}
+
+.status--error {
+  border-color: var(--color-danger);
+  background: var(--color-danger-bg);
+  color: var(--color-danger);
+}
+
+.status .button {
+  margin-top: var(--space-1);
+}
+
+.empty-state {
+  padding: var(--space-3) var(--space-2);
+  border: var(--border-width) dashed var(--color-border);
+  border-radius: var(--radius);
+  text-align: center;
+}
+
+.empty-state__title {
+  margin: 0;
+  font-size: var(--font-size-4);
+  font-weight: var(--font-weight-bold);
+}
+
+.empty-state__hint {
+  margin: 0;
+  color: var(--color-text-muted);
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-2);
+}
+
+.layout__side {
+  align-self: start;
+}
+
+@media (min-width: 64rem) {
+  .layout {
+    grid-template-columns: minmax(0, 1fr) var(--aside-width);
+  }
+
+  .layout__side {
+    position: sticky;
+    top: var(--space-1);
+  }
+}

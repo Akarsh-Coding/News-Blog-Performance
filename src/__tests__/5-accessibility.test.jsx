@@ -1,8 +1,8 @@
 import { describe, expect, it } from 'vitest'
 import { screen } from '@testing-library/react'
 import { axe, toHaveNoViolations } from 'jest-axe'
-import { fillTip, getBookmarkButton, getCategorySelect, getSearchBox, getSortSelect, getTipFields, renderLoadedApp } from '../test/helpers'
-import { ARTICLES, VALID_TIP } from '../test/fixtures'
+import { fillStory, getBookmarkButton, getCategorySelect, getSearchBox, getSortSelect, getStoryFields, renderLoadedApp } from '../test/helpers'
+import { ARTICLES, VALID_STORY } from '../test/fixtures'
 
 expect.extend(toHaveNoViolations)
 
@@ -35,8 +35,8 @@ describe('Accessibility (NFR) — ARIA labels', () => {
 
   it('has no axe violations (form showing validation errors)', async () => {
     const { container, user } = await renderLoadedApp()
-    await user.click(getTipFields().submit)
-    expect(getTipFields().name).toHaveAttribute('aria-invalid', 'true')
+    await user.click(getStoryFields().submit)
+    expect(getStoryFields().title).toHaveAttribute('aria-invalid', 'true')
     expect(await axe(container)).toHaveNoViolations()
   })
 
@@ -59,7 +59,7 @@ describe('Accessibility (NFR) — keyboard navigable', () => {
     const expected = [
       getSearchBox(), getCategorySelect(), getSortSelect(),
       ...ARTICLES.map((a) => getBookmarkButton(a.title)),
-      ...Object.values(getTipFields()).filter((el) => el.tagName !== 'FORM'),
+      ...Object.values(getStoryFields()).filter((el) => el.tagName !== 'FORM'),
     ]
     for (const element of expected) {
       expect(reached.has(element)).toBe(true)
@@ -78,8 +78,8 @@ describe('Accessibility (NFR) — keyboard navigable', () => {
 
   it('submits the form from the keyboard (Enter on the submit button)', async () => {
     const { user, postCalls } = await renderLoadedApp()
-    await fillTip(user, VALID_TIP)
-    getTipFields().submit.focus()
+    await fillStory(user, VALID_STORY)
+    getStoryFields().submit.focus()
     await user.keyboard('{Enter}')
     expect(postCalls()).toHaveLength(1)
   })

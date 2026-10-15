@@ -29,14 +29,30 @@ const methodOf = (init) => (init?.method ?? 'GET').toUpperCase()
  * GET (any URL)  -> resolves with `articles`
  * POST (any URL) -> resolves with { ok: true }
  * holdArticles / holdPost keep the request pending until released (slow network).
+ * failArticles / failureMode / failPost simulate requests that fail.
  */
-export function stubFetch({ articles = ARTICLES, holdArticles = false, holdPost = false } = {}) {
+export function stubFetch({
+  articles = ARTICLES,
+  holdArticles = false,
+  holdPost = false,
+  failArticles = 0, // number of initial GETs that fail before one succeeds
+  failureMode = 'network', // 'network' (fetch rejects) | 'http' (HTTP 500)
+  failPost = false,
+} = {}) {
   const articlesGate = deferred()
   const postGate = deferred()
+  let remainingFailures = failArticles
 
   const fetchMock = vi.fn((_url, init) => {
     if (methodOf(init) === 'POST') {
+      if (failPost) return Promise.reject(new TypeError('Failed to fetch'))
       return holdPost ? postGate.promise.then(() => jsonResponse({ ok: true })) : Promise.resolve(jsonResponse({ ok: true }))
+    }
+    if (remainingFailures > 0) {
+      remainingFailures -= 1
+      return failureMode === 'http'
+        ? Promise.resolve({ ok: false, status: 500, json: async () => ({}) })
+        : Promise.reject(new TypeError('Failed to fetch'))
     }
     return holdArticles ? articlesGate.promise.then(() => jsonResponse(articles)) : Promise.resolve(jsonResponse(articles))
   })
@@ -82,12 +98,12 @@ export const visibleTitles = () =>
     .queryAllByRole('listitem')
     .map((li) => within(li).getByRole('heading').textContent)
 
-export const getTipFields = () => ({
-  form: screen.getByRole('form', { name: /submit a tip/i }),
-  name: screen.getByRole('textbox', { name: /^name/i }),
-  email: screen.getByRole('textbox', { name: /^email/i }),
-  tip: screen.getByRole('textbox', { name: /^tip/i }),
-  submit: screen.getByRole('button', { name: /submit tip/i }),
+export const getStoryFields = () => ({
+  form: screen.getByRole('form', { name: /submit a story/i }),
+  title: screen.getByRole('textbox', { name: /^title/i }),
+  email: screen.getByRole('textbox', { name: /^author email/i }),
+  summary: screen.getByRole('textbox', { name: /^summary/i }),
+  submit: screen.getByRole('button', { name: /submit story/i }),
 })
 
 /** Any element with role=status whose text reads like a loading/submitting message. */
@@ -102,10 +118,10 @@ export async function enter(user, element, text) {
   await user.paste(text)
 }
 
-export async function fillTip(user, { name, email, tip } = {}) {
-  const fields = getTipFields()
-  if (name !== undefined) await enter(user, fields.name, name)
+export async function fillStory(user, { title, email, summary } = {}) {
+  const fields = getStoryFields()
+  if (title !== undefined) await enter(user, fields.title, title)
   if (email !== undefined) await enter(user, fields.email, email)
-  if (tip !== undefined) await enter(user, fields.tip, tip)
+  if (summary !== undefined) await enter(user, fields.summary, summary)
   return fields
 }
