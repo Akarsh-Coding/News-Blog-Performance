@@ -54,4 +54,21 @@ Pinned ESLint to v9 because `eslint-plugin-jsx-a11y` does not yet support v10. N
 
 ---
 
-<!-- Add Prompt #2 below -->
+### Prompt #2 — Feed the spec & write the failing tests (TDD: Red)
+
+**Phase:** TDD: write tests
+
+**Prompt:**
+> Here are the acceptance criteria and NFRs for a News Blog Performance Optimization interface. Do NOT write the implementation. Write only the test suite, using Vitest and React Testing Library, so I can verify these criteria. Cover: (1) Happy path: the interface renders a list of news articles, and search, category filter, sort, and bookmark toggle all update the list immediately; (2) Empty state: when a search returns nothing, a "No data found" message is shown, not a blank screen; (3) Bad connectivity: a visible loading indicator appears during any async operation, such as a simulated slow fetch; (4) Invalid input: submitting a form with missing or malformed data is blocked and the offending fields are marked with an error state; (5) Accessibility: all interactive elements have ARIA labels and are keyboard-operable; (6) Telemetry: `[Analytics] User interacted with Performance Optimization` is logged to the console on each primary action; (7) Security: text input containing `<script>alert(1)</script>` is sanitized before it's stored in state; (8) Performance: memoized child components do not re-render when unrelated state changes (use render counters or a mocked child), and the filtered list computation does not re-run when unrelated state changes. Run the tests and show me that they fail for the right reasons.
+
+**What the AI did:**
+Wrote 10 test files in `src/__tests__/` (one per criterion 1–8, plus unit contracts for `ArticleCard` and `filterAndSortArticles`), shared fixtures/helpers in `src/test/`, and `src/test/CONTRACT.md` documenting the interface the tests assume. Added `jest-axe` for automated a11y checks. Added a null-rendering `src/App.jsx` placeholder so tests fail on assertions rather than on an unresolved import. Wrote no implementation.
+
+**Outcome:** ✅ Worked — suite is Red (all 69 runnable tests fail; 2 suites fail to import their not-yet-existing modules).
+
+**Notes / follow-up:**
+First run had 1 vacuous test that passed against a blank page; fixed by adding a positive loading-indicator assertion. Most tests currently fail at the shared precondition (article list never renders), so individual assertions are not yet exercised — expect to find and fix a few test bugs in Green; change a test only if the spec is wrong.
+
+---
+
+<!-- Add Prompt #3 below -->

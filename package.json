@@ -4,12 +4,12 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
-    "test": "vitest run",
-    "test:watch": "vitest",
-    "lint": "eslint . --max-warnings 0"
+    "dev": "node node_modules/vite/bin/vite.js",
+    "build": "node node_modules/vite/bin/vite.js build",
+    "preview": "node node_modules/vite/bin/vite.js preview",
+    "test": "node node_modules/vitest/vitest.mjs run",
+    "test:watch": "node node_modules/vitest/vitest.mjs",
+    "lint": "node node_modules/eslint/bin/eslint.js . --max-warnings 0"
   },
   "dependencies": {
     "react": "^19.2.8",
@@ -30,6 +30,7 @@
     "eslint-plugin-react-hooks": "^7.1.1",
     "eslint-plugin-unused-imports": "^4.4.1",
     "globals": "^17.13.0",
+    "jest-axe": "^11.0.0",
     "jsdom": "^30.1.2",
     "vite": "^8.3.0",
     "vitest": "^5.0.4"
