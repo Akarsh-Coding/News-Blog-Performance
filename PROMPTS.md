@@ -71,4 +71,21 @@ First run had 1 vacuous test that passed against a blank page; fixed by adding a
 
 ---
 
-<!-- Add Prompt #3 below -->
+### Prompt #3 — Happy-path implementation + design system (Green, part 1)
+
+**Phase:** TDD: implement
+
+**Prompt:**
+> Now write the implementation to make the happy-path tests pass. First, create a monochromatic design system as CSS variables or a theme object: grayscale palette, spacing in 16px/32px steps, and a type scale, with no hardcoded hex values in components. Then build the news article explorer: a mock dataset of at least 200 articles (so performance matters), a search input, a category filter, a sort control, a bookmark toggle on each article card, and the article list. Keep the code straightforward and don't add optimizations yet. Run the tests and show me which now pass.
+
+**What the AI did:**
+Added `src/styles/tokens.css` (grayscale palette, 16/32px spacing scale, type scale; the only file with raw colors), `App.jsx`, `ArticleCard.jsx` (plain component, no memo yet) and `filterAndSortArticles`. Generated 240 deterministic articles into `public/articles.json` via `scripts/generate-articles.js`. Added two guard tests: `design-system.test.js` (no hardcoded colors; spacing and font-size only from tokens) and `dataset.test.js` (>= 200 unique articles). Replaced the Vite template favicon with a grayscale one.
+
+**Outcome:** ✅ Worked — all 15 happy-path tests pass, plus the filter unit tests and both guard tests. Remaining failures are the later steps (empty state, loading, tip form, telemetry, sanitization, memoization).
+
+**Notes / follow-up:**
+First run of `design-system.test.js` had 3 failures caused by a regex group offset in the test itself (it read the property name instead of the value); fixed the test, not the CSS. No loading or error state yet, so the list is briefly empty while the fetch is pending.
+
+---
+
+<!-- Add Prompt #4 below -->

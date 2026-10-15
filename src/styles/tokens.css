@@ -1,0 +1,58 @@
+/*
+ * Design tokens — monochromatic (grayscale only).
+ *
+ * RULE: this is the ONLY file allowed to contain raw color values.
+ * Components use the semantic tokens below (var(--color-*)), and spacing /
+ * type come from the scales below. `design-system.test.js` enforces this.
+ */
+:root {
+  color-scheme: light;
+
+  /* ---- Palette: grayscale ramp ---- */
+  --gray-0: #ffffff;
+  --gray-50: #f6f6f6;
+  --gray-100: #ebebeb;
+  --gray-200: #d6d6d6;
+  --gray-400: #8f8f8f; /* 3.2:1 on white: OK for UI borders */
+  --gray-700: #4d4d4d; /* 8.5:1 on white: OK for body text */
+  --gray-900: #141414;
+
+  /* ---- Semantic colors (what components should use) ---- */
+  --color-bg: var(--gray-0);
+  --color-surface: var(--gray-50);
+  --color-surface-hover: var(--gray-100);
+  --color-text: var(--gray-900);
+  --color-text-muted: var(--gray-700);
+  --color-border: var(--gray-400);
+  --color-border-subtle: var(--gray-200);
+  --color-inverse-bg: var(--gray-900);
+  --color-inverse-text: var(--gray-0);
+  --color-focus: var(--gray-900);
+
+  /* ---- Spacing: 16px / 32px steps ---- */
+  --space-1: 16px;
+  --space-2: 32px;
+  --space-3: 48px;
+  --space-4: 64px;
+
+  /* ---- Type scale ---- */
+  --font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-size-1: 0.875rem; /* 14px: meta text */
+  --font-size-2: 1rem; /* 16px: body */
+  --font-size-3: 1.25rem; /* 20px: card titles */
+  --font-size-4: 1.5rem; /* 24px */
+  --font-size-5: 2rem; /* 32px: page title */
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+  --line-height-tight: 1.25;
+  --line-height-body: 1.5;
+
+  /* ---- Shape & sizing ---- */
+  --border-width: 1px;
+  --radius: 4px;
+  --focus-width: 2px;
+  --focus-offset: 2px;
+  --target-size: 48px; /* minimum touch target */
+  --content-width: 1120px;
+  --card-min-width: 288px;
+}

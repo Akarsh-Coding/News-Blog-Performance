@@ -41,7 +41,7 @@ export default [
   },
   {
     // Node-side config files
-    files: ['*.config.js'],
+    files: ['*.config.js', 'scripts/**/*.js'],
     languageOptions: { globals: { ...globals.node } },
   },
   {

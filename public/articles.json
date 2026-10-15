@@ -1,0 +1,1682 @@
+[
+  {
+    "id": "art-001",
+    "title": "Public hospital reports shorter waiting times",
+    "summary": "Officials and analysts say the move could have a lasting effect on hospital care over the next year.",
+    "category": "Health",
+    "publishedAt": "2026-08-06T13:51:00.000Z"
+  },
+  {
+    "id": "art-002",
+    "title": "Vaccine programme expands free screening",
+    "summary": "Early figures suggest a measurable shift in hospital care, though experts say it is too soon to be sure.",
+    "category": "Health",
+    "publishedAt": "2026-09-15T08:31:00.000Z"
+  },
+  {
+    "id": "art-003",
+    "title": "Shipping giant plans thousands of new hires",
+    "summary": "Early figures suggest a measurable shift in consumer prices, though experts say it is too soon to be sure.",
+    "category": "Business",
+    "publishedAt": "2026-09-07T06:53:00.000Z"
+  },
+  {
+    "id": "art-004",
+    "title": "Budget committee faces pressure over spending",
+    "summary": "Observers called it a turning point for local budgets, with further details due in the coming weeks.",
+    "category": "Politics",
+    "publishedAt": "2026-08-08T14:35:00.000Z"
+  },
+  {
+    "id": "art-005",
+    "title": "Nutrition study expands free screening",
+    "summary": "Early figures suggest a measurable shift in hospital care, though experts say it is too soon to be sure.",
+    "category": "Health",
+    "publishedAt": "2026-10-03T10:58:00.000Z"
+  },
+  {
+    "id": "art-006",
+    "title": "Opposition party approves new housing plan",
+    "summary": "Reaction was mixed, with supporters pointing to gains for local budgets and critics urging caution.",
+    "category": "Politics",
+    "publishedAt": "2026-08-30T00:20:00.000Z"
+  },
+  {
+    "id": "art-007",
+    "title": "Relay squad breaks national record",
+    "summary": "Early figures suggest a measurable shift in league play, though experts say it is too soon to be sure.",
+    "category": "Sports",
+    "publishedAt": "2026-10-11T06:43:00.000Z"
+  },
+  {
+    "id": "art-008",
+    "title": "Opposition party unveils transparency rules",
+    "summary": "Early figures suggest a measurable shift in local budgets, though experts say it is too soon to be sure.",
+    "category": "Politics",
+    "publishedAt": "2026-10-04T12:53:00.000Z"
+  },
+  {
+    "id": "art-009",
+    "title": "City council agrees compromise on funding",
+    "summary": "Reaction was mixed, with supporters pointing to gains for local budgets and critics urging caution.",
+    "category": "Politics",
+    "publishedAt": "2026-09-29T22:34:00.000Z"
+  },
+  {
+    "id": "art-010",
+    "title": "Cloud provider launches privacy dashboard",
+    "summary": "Early figures suggest a measurable shift in everyday devices, though experts say it is too soon to be sure.",
+    "category": "Tech",
+    "publishedAt": "2026-09-24T01:37:00.000Z"
+  },
+  {
+    "id": "art-011",
+    "title": "Space agency confirm record ice loss",
+    "summary": "Observers called it a turning point for climate research, with further details due in the coming weeks.",
+    "category": "Science",
+    "publishedAt": "2026-09-06T13:11:00.000Z"
+  },
+  {
+    "id": "art-012",
+    "title": "Medical researchers map distant galaxy cluster",
+    "summary": "Observers called it a turning point for climate research, with further details due in the coming weeks.",
+    "category": "Science",
+    "publishedAt": "2026-10-05T05:17:00.000Z"
+  },
+  {
+    "id": "art-013",
+    "title": "Climate scientists detect unusual radio signal",
+    "summary": "Observers called it a turning point for climate research, with further details due in the coming weeks.",
+    "category": "Science",
+    "publishedAt": "2026-08-12T11:33:00.000Z"
+  },
+  {
+    "id": "art-014",
+    "title": "Clinical trial reports shorter waiting times",
+    "summary": "Reaction was mixed, with supporters pointing to gains for hospital care and critics urging caution.",
+    "category": "Health",
+    "publishedAt": "2026-07-20T03:47:00.000Z"
+  },
+  {
+    "id": "art-015",
+    "title": "Energy supplier opens new regional hub",
+    "summary": "Officials and analysts say the move could have a lasting effect on consumer prices over the next year.",
+    "category": "Business",
+    "publishedAt": "2026-08-16T19:21:00.000Z"
+  },
+  {
+    "id": "art-016",
+    "title": "Senate panel faces pressure over spending",
+    "summary": "Officials and analysts say the move could have a lasting effect on local budgets over the next year.",
+    "category": "Politics",
+    "publishedAt": "2026-10-12T08:49:00.000Z"
+  },
+  {
+    "id": "art-017",
+    "title": "Opposition party agrees compromise on funding",
+    "summary": "The announcement follows months of debate and is expected to affect local budgets across the region.",
+    "category": "Politics",
+    "publishedAt": "2026-09-01T16:23:00.000Z"
+  },
+  {
+    "id": "art-018",
+    "title": "State legislature opens inquiry into contracts",
+    "summary": "Observers called it a turning point for local budgets, with further details due in the coming weeks.",
+    "category": "Politics",
+    "publishedAt": "2026-07-18T14:31:00.000Z"
+  },
+  {
+    "id": "art-019",
+    "title": "Transport minister unveils transparency rules",
+    "summary": "Reaction was mixed, with supporters pointing to gains for local budgets and critics urging caution.",
+    "category": "Politics",
+    "publishedAt": "2026-09-28T19:33:00.000Z"
+  },
+  {
+    "id": "art-020",
+    "title": "Pharmacy network launches mobile care unit",
+    "summary": "Early figures suggest a measurable shift in hospital care, though experts say it is too soon to be sure.",
+    "category": "Health",
+    "publishedAt": "2026-09-01T21:06:00.000Z"
+  },
+  {
+    "id": "art-021",
+    "title": "Physics team confirm record ice loss",
+    "summary": "Observers called it a turning point for climate research, with further details due in the coming weeks.",
+    "category": "Science",
+    "publishedAt": "2026-08-29T06:24:00.000Z"
+  },
+  {
+    "id": "art-022",
+    "title": "Relay squad signs landmark contract",
+    "summary": "Reaction was mixed, with supporters pointing to gains for league play and critics urging caution.",
+    "category": "Sports",
+    "publishedAt": "2026-08-27T08:49:00.000Z"
+  },
+  {
+    "id": "art-023",
+    "title": "Browser team tests voice assistant upgrade",
+    "summary": "Early figures suggest a measurable shift in everyday devices, though experts say it is too soon to be sure.",
+    "category": "Tech",
+    "publishedAt": "2026-09-13T01:45:00.000Z"
+  },
+  {
+    "id": "art-024",
+    "title": "Pharmacy network expands free screening",
+    "summary": "Early figures suggest a measurable shift in hospital care, though experts say it is too soon to be sure.",
+    "category": "Health",
+    "publishedAt": "2026-09-06T11:39:00.000Z"
+  },
+  {
+    "id": "art-025",
+    "title": "Planning authority opens inquiry into contracts",
+    "summary": "Reaction was mixed, with supporters pointing to gains for local budgets and critics urging caution.",
+    "category": "Politics",
+    "publishedAt": "2026-09-11T03:37:00.000Z"
+  },
+  {
+    "id": "art-026",
+    "title": "Planning authority agrees compromise on funding",
+    "summary": "Officials and analysts say the move could have a lasting effect on local budgets over the next year.",
+    "category": "Politics",
+    "publishedAt": "2026-07-22T14:25:00.000Z"
+  },
+  {
+    "id": "art-027",
+    "title": "Transport minister opens inquiry into contracts",
+    "summary": "Early figures suggest a measurable shift in local budgets, though experts say it is too soon to be sure.",
+    "category": "Politics",
+    "publishedAt": "2026-10-10T03:44:00.000Z"
+  },
+  {
+    "id": "art-028",
+    "title": "Home side announces retirement after season",
+    "summary": "The announcement follows months of debate and is expected to affect league play across the region.",
+    "category": "Sports",
+    "publishedAt": "2026-10-13T08:42:00.000Z"
+  },
+  {
+    "id": "art-029",
+    "title": "Swim champion stuns favourites in final",
+    "summary": "Officials and analysts say the move could have a lasting effect on league play over the next year.",
+    "category": "Sports",
+    "publishedAt": "2026-08-08T20:37:00.000Z"
+  },
+  {
+    "id": "art-030",
+    "title": "Physics team discover new deep-sea species",
+    "summary": "Reaction was mixed, with supporters pointing to gains for climate research and critics urging caution.",
+    "category": "Science",
+    "publishedAt": "2026-09-19T19:59:00.000Z"
+  },
+  {
+    "id": "art-031",
+    "title": "Women’s team announces retirement after season",
+    "summary": "Officials and analysts say the move could have a lasting effect on league play over the next year.",
+    "category": "Sports",
+    "publishedAt": "2026-08-07T22:37:00.000Z"
+  },
+  {
+    "id": "art-032",
+    "title": "Rural clinic expands free screening",
+    "summary": "Early figures suggest a measurable shift in hospital care, though experts say it is too soon to be sure.",
+    "category": "Health",
+    "publishedAt": "2026-10-02T07:59:00.000Z"
+  },
+  {
+    "id": "art-033",
+    "title": "Security researchers patches critical flaw",
+    "summary": "Early figures suggest a measurable shift in everyday devices, though experts say it is too soon to be sure.",
+    "category": "Tech",
+    "publishedAt": "2026-07-24T06:44:00.000Z"
+  },
+  {
+    "id": "art-034",
+    "title": "Retail chain agrees surprise merger",
+    "summary": "Officials and analysts say the move could have a lasting effect on consumer prices over the next year.",
+    "category": "Business",
+    "publishedAt": "2026-09-18T15:29:00.000Z"
+  },
+  {
+    "id": "art-035",
+    "title": "Climate scientists publish soil carbon study",
+    "summary": "Observers called it a turning point for climate research, with further details due in the coming weeks.",
+    "category": "Science",
+    "publishedAt": "2026-08-09T20:13:00.000Z"
+  },
+  {
+    "id": "art-036",
+    "title": "Senate panel opens inquiry into contracts",
+    "summary": "Officials and analysts say the move could have a lasting effect on local budgets over the next year.",
+    "category": "Politics",
+    "publishedAt": "2026-10-08T11:57:00.000Z"
+  },
+  {
+    "id": "art-037",
+    "title": "Airline group warns of rising costs",
+    "summary": "The announcement follows months of debate and is expected to affect consumer prices across the region.",
+    "category": "Business",
+    "publishedAt": "2026-09-04T18:08:00.000Z"
+  },
+  {
+    "id": "art-038",
+    "title": "Software startup patches critical flaw",
+    "summary": "Reaction was mixed, with supporters pointing to gains for everyday devices and critics urging caution.",
+    "category": "Tech",
+    "publishedAt": "2026-08-23T11:35:00.000Z"
+  },
+  {
+    "id": "art-039",
+    "title": "City council approves new housing plan",
+    "summary": "Observers called it a turning point for local budgets, with further details due in the coming weeks.",
+    "category": "Politics",
+    "publishedAt": "2026-09-09T15:03:00.000Z"
+  },
+  {
+    "id": "art-040",
+    "title": "Robotics lab tests voice assistant upgrade",
+    "summary": "Officials and analysts say the move could have a lasting effect on everyday devices over the next year.",
+    "category": "Tech",
+    "publishedAt": "2026-09-06T10:11:00.000Z"
+  },
+  {
+    "id": "art-041",
+    "title": "Sleep researchers expands free screening",
+    "summary": "Observers called it a turning point for hospital care, with further details due in the coming weeks.",
+    "category": "Health",
+    "publishedAt": "2026-09-21T07:53:00.000Z"
+  },
+  {
+    "id": "art-042",
+    "title": "Chip maker launches privacy dashboard",
+    "summary": "Observers called it a turning point for everyday devices, with further details due in the coming weeks.",
+    "category": "Tech",
+    "publishedAt": "2026-09-20T06:19:00.000Z"
+  },
+  {
+    "id": "art-043",
+    "title": "Cricket club clinches title in overtime",
+    "summary": "Early figures suggest a measurable shift in league play, though experts say it is too soon to be sure.",
+    "category": "Sports",
+    "publishedAt": "2026-07-19T10:34:00.000Z"
+  },
+  {
+    "id": "art-044",
+    "title": "Airline group cuts forecast for next year",
+    "summary": "Early figures suggest a measurable shift in consumer prices, though experts say it is too soon to be sure.",
+    "category": "Business",
+    "publishedAt": "2026-08-31T21:53:00.000Z"
+  },
+  {
+    "id": "art-045",
+    "title": "Astronomy group publish soil carbon study",
+    "summary": "Officials and analysts say the move could have a lasting effect on climate research over the next year.",
+    "category": "Science",
+    "publishedAt": "2026-07-23T15:14:00.000Z"
+  },
+  {
+    "id": "art-046",
+    "title": "Transport minister delays vote on budget",
+    "summary": "Observers called it a turning point for local budgets, with further details due in the coming weeks.",
+    "category": "Politics",
+    "publishedAt": "2026-08-27T19:46:00.000Z"
+  },
+  {
+    "id": "art-047",
+    "title": "Vaccine programme updates winter guidance",
+    "summary": "Early figures suggest a measurable shift in hospital care, though experts say it is too soon to be sure.",
+    "category": "Health",
+    "publishedAt": "2026-08-06T15:16:00.000Z"
+  },
+  {
+    "id": "art-048",
+    "title": "Cloud provider patches critical flaw",
+    "summary": "The announcement follows months of debate and is expected to affect everyday devices across the region.",
+    "category": "Tech",
+    "publishedAt": "2026-09-25T22:55:00.000Z"
+  },
+  {
+    "id": "art-049",
+    "title": "Veteran captain breaks national record",
+    "summary": "Early figures suggest a measurable shift in league play, though experts say it is too soon to be sure.",
+    "category": "Sports",
+    "publishedAt": "2026-09-28T13:16:00.000Z"
+  },
+  {
+    "id": "art-050",
+    "title": "Climate scientists confirm record ice loss",
+    "summary": "Early figures suggest a measurable shift in climate research, though experts say it is too soon to be sure.",
+    "category": "Science",
+    "publishedAt": "2026-10-14T02:55:00.000Z"
+  },
+  {
+    "id": "art-051",
+    "title": "Software startup unveils faster processor",
+    "summary": "Reaction was mixed, with supporters pointing to gains for everyday devices and critics urging caution.",
+    "category": "Tech",
+    "publishedAt": "2026-08-13T02:27:00.000Z"
+  },
+  {
+    "id": "art-052",
+    "title": "Security researchers doubles battery life in new model",
+    "summary": "Officials and analysts say the move could have a lasting effect on everyday devices over the next year.",
+    "category": "Tech",
+    "publishedAt": "2026-09-30T18:58:00.000Z"
+  },
+  {
+    "id": "art-053",
+    "title": "Public hospital updates winter guidance",
+    "summary": "Officials and analysts say the move could have a lasting effect on hospital care over the next year.",
+    "category": "Health",
+    "publishedAt": "2026-10-11T10:00:00.000Z"
+  },
+  {
+    "id": "art-054",
+    "title": "Energy supplier cuts forecast for next year",
+    "summary": "The announcement follows months of debate and is expected to affect consumer prices across the region.",
+    "category": "Business",
+    "publishedAt": "2026-09-04T03:36:00.000Z"
+  },
+  {
+    "id": "art-055",
+    "title": "Astronomy group confirm record ice loss",
+    "summary": "Officials and analysts say the move could have a lasting effect on climate research over the next year.",
+    "category": "Science",
+    "publishedAt": "2026-09-23T16:54:00.000Z"
+  },
+  {
+    "id": "art-056",
+    "title": "Insurance firm agrees surprise merger",
+    "summary": "The announcement follows months of debate and is expected to affect consumer prices across the region.",
+    "category": "Business",
+    "publishedAt": "2026-07-17T02:22:00.000Z"
+  },
+  {
+    "id": "art-057",
+    "title": "Software startup launches privacy dashboard",
+    "summary": "Early figures suggest a measurable shift in everyday devices, though experts say it is too soon to be sure.",
+    "category": "Tech",
+    "publishedAt": "2026-08-14T10:58:00.000Z"
+  },
+  {
+    "id": "art-058",
+    "title": "Youth academy signs landmark contract",
+    "summary": "Early figures suggest a measurable shift in league play, though experts say it is too soon to be sure.",
+    "category": "Sports",
+    "publishedAt": "2026-08-26T21:37:00.000Z"
+  },
+  {
+    "id": "art-059",
+    "title": "Cloud provider releases open data toolkit",
+    "summary": "Reaction was mixed, with supporters pointing to gains for everyday devices and critics urging caution.",
+    "category": "Tech",
+    "publishedAt": "2026-08-02T20:25:00.000Z"
+  },
+  {
+    "id": "art-060",
+    "title": "Election board unveils transparency rules",
+    "summary": "Reaction was mixed, with supporters pointing to gains for local budgets and critics urging caution.",
+    "category": "Politics",
+    "publishedAt": "2026-09-15T03:10:00.000Z"
+  },
+  {
+    "id": "art-061",
+    "title": "Shipping giant warns of rising costs",
+    "summary": "Observers called it a turning point for consumer prices, with further details due in the coming weeks.",
+    "category": "Business",
+    "publishedAt": "2026-09-08T21:20:00.000Z"
+  },
+  {
+    "id": "art-062",
+    "title": "Robotics lab launches privacy dashboard",
+    "summary": "Early figures suggest a measurable shift in everyday devices, though experts say it is too soon to be sure.",
+    "category": "Tech",
+    "publishedAt": "2026-08-06T00:37:00.000Z"
+  },
+  {
+    "id": "art-063",
+    "title": "Cricket club signs landmark contract",
+    "summary": "Reaction was mixed, with supporters pointing to gains for league play and critics urging caution.",
+    "category": "Sports",
+    "publishedAt": "2026-08-15T04:43:00.000Z"
+  },
+  {
+    "id": "art-064",
+    "title": "Senate panel delays vote on budget",
+    "summary": "Observers called it a turning point for local budgets, with further details due in the coming weeks.",
+    "category": "Politics",
+    "publishedAt": "2026-07-22T04:22:00.000Z"
+  },
+  {
+    "id": "art-065",
+    "title": "Health ministry trains hundreds of new nurses",
+    "summary": "Observers called it a turning point for hospital care, with further details due in the coming weeks.",
+    "category": "Health",
+    "publishedAt": "2026-10-08T12:58:00.000Z"
+  },
+  {
+    "id": "art-066",
+    "title": "Sleep researchers trains hundreds of new nurses",
+    "summary": "Observers called it a turning point for hospital care, with further details due in the coming weeks.",
+    "category": "Health",
+    "publishedAt": "2026-09-18T06:16:00.000Z"
+  },
+  {
+    "id": "art-067",
+    "title": "Energy supplier reports record quarterly profit",
+    "summary": "Officials and analysts say the move could have a lasting effect on consumer prices over the next year.",
+    "category": "Business",
+    "publishedAt": "2026-08-16T07:45:00.000Z"
+  },
+  {
+    "id": "art-068",
+    "title": "Security researchers releases open data toolkit",
+    "summary": "The announcement follows months of debate and is expected to affect everyday devices across the region.",
+    "category": "Tech",
+    "publishedAt": "2026-07-23T10:28:00.000Z"
+  },
+  {
+    "id": "art-069",
+    "title": "Marathon runner announces retirement after season",
+    "summary": "The announcement follows months of debate and is expected to affect league play across the region.",
+    "category": "Sports",
+    "publishedAt": "2026-08-29T07:34:00.000Z"
+  },
+  {
+    "id": "art-070",
+    "title": "Cricket club stuns favourites in final",
+    "summary": "The announcement follows months of debate and is expected to affect league play across the region.",
+    "category": "Sports",
+    "publishedAt": "2026-10-08T12:38:00.000Z"
+  },
+  {
+    "id": "art-071",
+    "title": "Insurance firm opens new regional hub",
+    "summary": "Observers called it a turning point for consumer prices, with further details due in the coming weeks.",
+    "category": "Business",
+    "publishedAt": "2026-08-25T00:45:00.000Z"
+  },
+  {
+    "id": "art-072",
+    "title": "Vaccine programme reports shorter waiting times",
+    "summary": "Observers called it a turning point for hospital care, with further details due in the coming weeks.",
+    "category": "Health",
+    "publishedAt": "2026-08-29T11:57:00.000Z"
+  },
+  {
+    "id": "art-073",
+    "title": "Senate panel agrees compromise on funding",
+    "summary": "The announcement follows months of debate and is expected to affect local budgets across the region.",
+    "category": "Politics",
+    "publishedAt": "2026-08-27T23:47:00.000Z"
+  },
+  {
+    "id": "art-074",
+    "title": "Phone maker tests voice assistant upgrade",
+    "summary": "Early figures suggest a measurable shift in everyday devices, though experts say it is too soon to be sure.",
+    "category": "Tech",
+    "publishedAt": "2026-07-21T17:07:00.000Z"
+  },
+  {
+    "id": "art-075",
+    "title": "Veteran captain announces retirement after season",
+    "summary": "Officials and analysts say the move could have a lasting effect on league play over the next year.",
+    "category": "Sports",
+    "publishedAt": "2026-10-04T23:15:00.000Z"
+  },
+  {
+    "id": "art-076",
+    "title": "Cricket club recovers from late injury",
+    "summary": "Officials and analysts say the move could have a lasting effect on league play over the next year.",
+    "category": "Sports",
+    "publishedAt": "2026-07-31T17:24:00.000Z"
+  },
+  {
+    "id": "art-077",
+    "title": "Rural clinic finds benefit in daily walking",
+    "summary": "Early figures suggest a measurable shift in hospital care, though experts say it is too soon to be sure.",
+    "category": "Health",
+    "publishedAt": "2026-10-01T03:53:00.000Z"
+  },
+  {
+    "id": "art-078",
+    "title": "Planning authority unveils transparency rules",
+    "summary": "The announcement follows months of debate and is expected to affect local budgets across the region.",
+    "category": "Politics",
+    "publishedAt": "2026-09-10T04:40:00.000Z"
+  },
+  {
+    "id": "art-079",
+    "title": "Regional bank opens new regional hub",
+    "summary": "The announcement follows months of debate and is expected to affect consumer prices across the region.",
+    "category": "Business",
+    "publishedAt": "2026-09-05T19:09:00.000Z"
+  },
+  {
+    "id": "art-080",
+    "title": "Marine biologists detect unusual radio signal",
+    "summary": "Reaction was mixed, with supporters pointing to gains for climate research and critics urging caution.",
+    "category": "Science",
+    "publishedAt": "2026-08-03T21:17:00.000Z"
+  },
+  {
+    "id": "art-081",
+    "title": "Pharmacy network updates winter guidance",
+    "summary": "Early figures suggest a measurable shift in hospital care, though experts say it is too soon to be sure.",
+    "category": "Health",
+    "publishedAt": "2026-10-08T03:04:00.000Z"
+  },
+  {
+    "id": "art-082",
+    "title": "Climate scientists map distant galaxy cluster",
+    "summary": "Officials and analysts say the move could have a lasting effect on climate research over the next year.",
+    "category": "Science",
+    "publishedAt": "2026-09-24T22:54:00.000Z"
+  },
+  {
+    "id": "art-083",
+    "title": "Software startup tests voice assistant upgrade",
+    "summary": "Reaction was mixed, with supporters pointing to gains for everyday devices and critics urging caution.",
+    "category": "Tech",
+    "publishedAt": "2026-08-16T22:30:00.000Z"
+  },
+  {
+    "id": "art-084",
+    "title": "Clinical trial updates winter guidance",
+    "summary": "Reaction was mixed, with supporters pointing to gains for hospital care and critics urging caution.",
+    "category": "Health",
+    "publishedAt": "2026-08-05T12:06:00.000Z"
+  },
+  {
+    "id": "art-085",
+    "title": "Marathon runner clinches title in overtime",
+    "summary": "Officials and analysts say the move could have a lasting effect on league play over the next year.",
+    "category": "Sports",
+    "publishedAt": "2026-10-05T14:51:00.000Z"
+  },
+  {
+    "id": "art-086",
+    "title": "Botany institute map distant galaxy cluster",
+    "summary": "Reaction was mixed, with supporters pointing to gains for climate research and critics urging caution.",
+    "category": "Science",
+    "publishedAt": "2026-07-31T20:27:00.000Z"
+  },
+  {
+    "id": "art-087",
+    "title": "Phone maker launches privacy dashboard",
+    "summary": "Officials and analysts say the move could have a lasting effect on everyday devices over the next year.",
+    "category": "Tech",
+    "publishedAt": "2026-10-09T22:26:00.000Z"
+  },
+  {
+    "id": "art-088",
+    "title": "Women’s team signs landmark contract",
+    "summary": "Early figures suggest a measurable shift in league play, though experts say it is too soon to be sure.",
+    "category": "Sports",
+    "publishedAt": "2026-09-04T02:58:00.000Z"
+  },
+  {
+    "id": "art-089",
+    "title": "Public hospital launches mobile care unit",
+    "summary": "Reaction was mixed, with supporters pointing to gains for hospital care and critics urging caution.",
+    "category": "Health",
+    "publishedAt": "2026-09-03T10:13:00.000Z"
+  },
+  {
+    "id": "art-090",
+    "title": "Public hospital trains hundreds of new nurses",
+    "summary": "Officials and analysts say the move could have a lasting effect on hospital care over the next year.",
+    "category": "Health",
+    "publishedAt": "2026-09-30T12:37:00.000Z"
+  },
+  {
+    "id": "art-091",
+    "title": "Public hospital expands free screening",
+    "summary": "Officials and analysts say the move could have a lasting effect on hospital care over the next year.",
+    "category": "Health",
+    "publishedAt": "2026-09-11T10:22:00.000Z"
+  },
+  {
+    "id": "art-092",
+    "title": "Car maker opens new regional hub",
+    "summary": "Early figures suggest a measurable shift in consumer prices, though experts say it is too soon to be sure.",
+    "category": "Business",
+    "publishedAt": "2026-08-15T21:06:00.000Z"
+  },
+  {
+    "id": "art-093",
+    "title": "State legislature unveils transparency rules",
+    "summary": "Early figures suggest a measurable shift in local budgets, though experts say it is too soon to be sure.",
+    "category": "Politics",
+    "publishedAt": "2026-08-06T01:36:00.000Z"
+  },
+  {
+    "id": "art-094",
+    "title": "Airline group opens new regional hub",
+    "summary": "The announcement follows months of debate and is expected to affect consumer prices across the region.",
+    "category": "Business",
+    "publishedAt": "2026-08-07T13:11:00.000Z"
+  },
+  {
+    "id": "art-095",
+    "title": "Physics team publish soil carbon study",
+    "summary": "Reaction was mixed, with supporters pointing to gains for climate research and critics urging caution.",
+    "category": "Science",
+    "publishedAt": "2026-10-13T13:16:00.000Z"
+  },
+  {
+    "id": "art-096",
+    "title": "Cricket club breaks national record",
+    "summary": "The announcement follows months of debate and is expected to affect league play across the region.",
+    "category": "Sports",
+    "publishedAt": "2026-08-09T14:34:00.000Z"
+  },
+  {
+    "id": "art-097",
+    "title": "Relay squad clinches title in overtime",
+    "summary": "Observers called it a turning point for league play, with further details due in the coming weeks.",
+    "category": "Sports",
+    "publishedAt": "2026-07-20T05:04:00.000Z"
+  },
+  {
+    "id": "art-098",
+    "title": "Airline group agrees surprise merger",
+    "summary": "Observers called it a turning point for consumer prices, with further details due in the coming weeks.",
+    "category": "Business",
+    "publishedAt": "2026-10-13T19:54:00.000Z"
+  },
+  {
+    "id": "art-099",
+    "title": "Medical researchers confirm record ice loss",
+    "summary": "Officials and analysts say the move could have a lasting effect on climate research over the next year.",
+    "category": "Science",
+    "publishedAt": "2026-07-29T00:59:00.000Z"
+  },
+  {
+    "id": "art-100",
+    "title": "Relay squad stuns favourites in final",
+    "summary": "Early figures suggest a measurable shift in league play, though experts say it is too soon to be sure.",
+    "category": "Sports",
+    "publishedAt": "2026-08-15T19:30:00.000Z"
+  },
+  {
+    "id": "art-101",
+    "title": "Election board opens inquiry into contracts",
+    "summary": "Reaction was mixed, with supporters pointing to gains for local budgets and critics urging caution.",
+    "category": "Politics",
+    "publishedAt": "2026-09-19T19:28:00.000Z"
+  },
+  {
+    "id": "art-102",
+    "title": "Sleep researchers updates winter guidance",
+    "summary": "Observers called it a turning point for hospital care, with further details due in the coming weeks.",
+    "category": "Health",
+    "publishedAt": "2026-09-10T10:51:00.000Z"
+  },
+  {
+    "id": "art-103",
+    "title": "State legislature agrees compromise on funding",
+    "summary": "Reaction was mixed, with supporters pointing to gains for local budgets and critics urging caution.",
+    "category": "Politics",
+    "publishedAt": "2026-09-11T10:49:00.000Z"
+  },
+  {
+    "id": "art-104",
+    "title": "Browser team patches critical flaw",
+    "summary": "Early figures suggest a measurable shift in everyday devices, though experts say it is too soon to be sure.",
+    "category": "Tech",
+    "publishedAt": "2026-10-05T07:04:00.000Z"
+  },
+  {
+    "id": "art-105",
+    "title": "Clinical trial trains hundreds of new nurses",
+    "summary": "The announcement follows months of debate and is expected to affect hospital care across the region.",
+    "category": "Health",
+    "publishedAt": "2026-08-10T01:28:00.000Z"
+  },
+  {
+    "id": "art-106",
+    "title": "Shipping giant cuts forecast for next year",
+    "summary": "Officials and analysts say the move could have a lasting effect on consumer prices over the next year.",
+    "category": "Business",
+    "publishedAt": "2026-08-28T05:33:00.000Z"
+  },
+  {
+    "id": "art-107",
+    "title": "Physics team detect unusual radio signal",
+    "summary": "Reaction was mixed, with supporters pointing to gains for climate research and critics urging caution.",
+    "category": "Science",
+    "publishedAt": "2026-09-12T16:07:00.000Z"
+  },
+  {
+    "id": "art-108",
+    "title": "Browser team unveils faster processor",
+    "summary": "Early figures suggest a measurable shift in everyday devices, though experts say it is too soon to be sure.",
+    "category": "Tech",
+    "publishedAt": "2026-09-22T23:50:00.000Z"
+  },
+  {
+    "id": "art-109",
+    "title": "Youth academy breaks national record",
+    "summary": "Officials and analysts say the move could have a lasting effect on league play over the next year.",
+    "category": "Sports",
+    "publishedAt": "2026-07-19T17:48:00.000Z"
+  },
+  {
+    "id": "art-110",
+    "title": "Chip maker patches critical flaw",
+    "summary": "Early figures suggest a measurable shift in everyday devices, though experts say it is too soon to be sure.",
+    "category": "Tech",
+    "publishedAt": "2026-10-03T09:33:00.000Z"
+  },
+  {
+    "id": "art-111",
+    "title": "Food producer cuts forecast for next year",
+    "summary": "Reaction was mixed, with supporters pointing to gains for consumer prices and critics urging caution.",
+    "category": "Business",
+    "publishedAt": "2026-10-06T08:48:00.000Z"
+  },
+  {
+    "id": "art-112",
+    "title": "Food producer plans thousands of new hires",
+    "summary": "The announcement follows months of debate and is expected to affect consumer prices across the region.",
+    "category": "Business",
+    "publishedAt": "2026-08-14T11:41:00.000Z"
+  },
+  {
+    "id": "art-113",
+    "title": "Security researchers tests voice assistant upgrade",
+    "summary": "The announcement follows months of debate and is expected to affect everyday devices across the region.",
+    "category": "Tech",
+    "publishedAt": "2026-07-27T11:20:00.000Z"
+  },
+  {
+    "id": "art-114",
+    "title": "Geology survey map distant galaxy cluster",
+    "summary": "The announcement follows months of debate and is expected to affect climate research across the region.",
+    "category": "Science",
+    "publishedAt": "2026-08-24T00:45:00.000Z"
+  },
+  {
+    "id": "art-115",
+    "title": "Marathon runner signs landmark contract",
+    "summary": "Officials and analysts say the move could have a lasting effect on league play over the next year.",
+    "category": "Sports",
+    "publishedAt": "2026-09-29T13:30:00.000Z"
+  },
+  {
+    "id": "art-116",
+    "title": "City council opens inquiry into contracts",
+    "summary": "The announcement follows months of debate and is expected to affect local budgets across the region.",
+    "category": "Politics",
+    "publishedAt": "2026-09-09T05:06:00.000Z"
+  },
+  {
+    "id": "art-117",
+    "title": "City council unveils transparency rules",
+    "summary": "Observers called it a turning point for local budgets, with further details due in the coming weeks.",
+    "category": "Politics",
+    "publishedAt": "2026-07-22T13:06:00.000Z"
+  },
+  {
+    "id": "art-118",
+    "title": "Browser team releases open data toolkit",
+    "summary": "Officials and analysts say the move could have a lasting effect on everyday devices over the next year.",
+    "category": "Tech",
+    "publishedAt": "2026-09-26T21:17:00.000Z"
+  },
+  {
+    "id": "art-119",
+    "title": "Marine biologists confirm record ice loss",
+    "summary": "Early figures suggest a measurable shift in climate research, though experts say it is too soon to be sure.",
+    "category": "Science",
+    "publishedAt": "2026-09-01T02:52:00.000Z"
+  },
+  {
+    "id": "art-120",
+    "title": "Phone maker patches critical flaw",
+    "summary": "The announcement follows months of debate and is expected to affect everyday devices across the region.",
+    "category": "Tech",
+    "publishedAt": "2026-09-08T16:10:00.000Z"
+  },
+  {
+    "id": "art-121",
+    "title": "State legislature approves new housing plan",
+    "summary": "Reaction was mixed, with supporters pointing to gains for local budgets and critics urging caution.",
+    "category": "Politics",
+    "publishedAt": "2026-08-23T12:32:00.000Z"
+  },
+  {
+    "id": "art-122",
+    "title": "Botany institute publish soil carbon study",
+    "summary": "The announcement follows months of debate and is expected to affect climate research across the region.",
+    "category": "Science",
+    "publishedAt": "2026-08-26T22:12:00.000Z"
+  },
+  {
+    "id": "art-123",
+    "title": "Astronomy group detect unusual radio signal",
+    "summary": "Reaction was mixed, with supporters pointing to gains for climate research and critics urging caution.",
+    "category": "Science",
+    "publishedAt": "2026-07-24T14:13:00.000Z"
+  },
+  {
+    "id": "art-124",
+    "title": "Browser team doubles battery life in new model",
+    "summary": "Reaction was mixed, with supporters pointing to gains for everyday devices and critics urging caution.",
+    "category": "Tech",
+    "publishedAt": "2026-08-19T06:05:00.000Z"
+  },
+  {
+    "id": "art-125",
+    "title": "Robotics lab doubles battery life in new model",
+    "summary": "Reaction was mixed, with supporters pointing to gains for everyday devices and critics urging caution.",
+    "category": "Tech",
+    "publishedAt": "2026-08-09T08:49:00.000Z"
+  },
+  {
+    "id": "art-126",
+    "title": "Opposition party faces pressure over spending",
+    "summary": "Officials and analysts say the move could have a lasting effect on local budgets over the next year.",
+    "category": "Politics",
+    "publishedAt": "2026-08-13T03:04:00.000Z"
+  },
+  {
+    "id": "art-127",
+    "title": "Chip maker releases open data toolkit",
+    "summary": "Reaction was mixed, with supporters pointing to gains for everyday devices and critics urging caution.",
+    "category": "Tech",
+    "publishedAt": "2026-10-11T10:42:00.000Z"
+  },
+  {
+    "id": "art-128",
+    "title": "Marine biologists grow drought-resistant crop",
+    "summary": "Early figures suggest a measurable shift in climate research, though experts say it is too soon to be sure.",
+    "category": "Science",
+    "publishedAt": "2026-10-11T22:52:00.000Z"
+  },
+  {
+    "id": "art-129",
+    "title": "Election board faces pressure over spending",
+    "summary": "The announcement follows months of debate and is expected to affect local budgets across the region.",
+    "category": "Politics",
+    "publishedAt": "2026-10-13T02:37:00.000Z"
+  },
+  {
+    "id": "art-130",
+    "title": "Opposition party opens inquiry into contracts",
+    "summary": "Reaction was mixed, with supporters pointing to gains for local budgets and critics urging caution.",
+    "category": "Politics",
+    "publishedAt": "2026-08-08T00:35:00.000Z"
+  },
+  {
+    "id": "art-131",
+    "title": "Clinical trial finds benefit in daily walking",
+    "summary": "Reaction was mixed, with supporters pointing to gains for hospital care and critics urging caution.",
+    "category": "Health",
+    "publishedAt": "2026-08-21T16:38:00.000Z"
+  },
+  {
+    "id": "art-132",
+    "title": "Vaccine programme launches mobile care unit",
+    "summary": "Observers called it a turning point for hospital care, with further details due in the coming weeks.",
+    "category": "Health",
+    "publishedAt": "2026-09-06T14:48:00.000Z"
+  },
+  {
+    "id": "art-133",
+    "title": "Climate scientists discover new deep-sea species",
+    "summary": "Observers called it a turning point for climate research, with further details due in the coming weeks.",
+    "category": "Science",
+    "publishedAt": "2026-07-23T02:30:00.000Z"
+  },
+  {
+    "id": "art-134",
+    "title": "Relay squad announces retirement after season",
+    "summary": "The announcement follows months of debate and is expected to affect league play across the region.",
+    "category": "Sports",
+    "publishedAt": "2026-07-20T07:32:00.000Z"
+  },
+  {
+    "id": "art-135",
+    "title": "Chip maker tests voice assistant upgrade",
+    "summary": "Officials and analysts say the move could have a lasting effect on everyday devices over the next year.",
+    "category": "Tech",
+    "publishedAt": "2026-08-02T20:03:00.000Z"
+  },
+  {
+    "id": "art-136",
+    "title": "Cricket club announces retirement after season",
+    "summary": "Early figures suggest a measurable shift in league play, though experts say it is too soon to be sure.",
+    "category": "Sports",
+    "publishedAt": "2026-09-12T22:03:00.000Z"
+  },
+  {
+    "id": "art-137",
+    "title": "Transport minister agrees compromise on funding",
+    "summary": "Officials and analysts say the move could have a lasting effect on local budgets over the next year.",
+    "category": "Politics",
+    "publishedAt": "2026-07-26T05:04:00.000Z"
+  },
+  {
+    "id": "art-138",
+    "title": "Open-source group doubles battery life in new model",
+    "summary": "The announcement follows months of debate and is expected to affect everyday devices across the region.",
+    "category": "Tech",
+    "publishedAt": "2026-10-13T05:50:00.000Z"
+  },
+  {
+    "id": "art-139",
+    "title": "Security researchers unveils faster processor",
+    "summary": "The announcement follows months of debate and is expected to affect everyday devices across the region.",
+    "category": "Tech",
+    "publishedAt": "2026-08-29T07:55:00.000Z"
+  },
+  {
+    "id": "art-140",
+    "title": "Clinical trial launches mobile care unit",
+    "summary": "The announcement follows months of debate and is expected to affect hospital care across the region.",
+    "category": "Health",
+    "publishedAt": "2026-08-06T16:02:00.000Z"
+  },
+  {
+    "id": "art-141",
+    "title": "Marathon runner stuns favourites in final",
+    "summary": "Observers called it a turning point for league play, with further details due in the coming weeks.",
+    "category": "Sports",
+    "publishedAt": "2026-09-24T15:50:00.000Z"
+  },
+  {
+    "id": "art-142",
+    "title": "Election board agrees compromise on funding",
+    "summary": "Observers called it a turning point for local budgets, with further details due in the coming weeks.",
+    "category": "Politics",
+    "publishedAt": "2026-09-02T15:11:00.000Z"
+  },
+  {
+    "id": "art-143",
+    "title": "Medical researchers publish soil carbon study",
+    "summary": "Reaction was mixed, with supporters pointing to gains for climate research and critics urging caution.",
+    "category": "Science",
+    "publishedAt": "2026-08-29T10:54:00.000Z"
+  },
+  {
+    "id": "art-144",
+    "title": "Space agency map distant galaxy cluster",
+    "summary": "Observers called it a turning point for climate research, with further details due in the coming weeks.",
+    "category": "Science",
+    "publishedAt": "2026-07-27T21:35:00.000Z"
+  },
+  {
+    "id": "art-145",
+    "title": "Rural clinic trains hundreds of new nurses",
+    "summary": "Reaction was mixed, with supporters pointing to gains for hospital care and critics urging caution.",
+    "category": "Health",
+    "publishedAt": "2026-08-05T14:08:00.000Z"
+  },
+  {
+    "id": "art-146",
+    "title": "Youth academy stuns favourites in final",
+    "summary": "Observers called it a turning point for league play, with further details due in the coming weeks.",
+    "category": "Sports",
+    "publishedAt": "2026-09-05T19:33:00.000Z"
+  },
+  {
+    "id": "art-147",
+    "title": "Car maker warns of rising costs",
+    "summary": "Officials and analysts say the move could have a lasting effect on consumer prices over the next year.",
+    "category": "Business",
+    "publishedAt": "2026-07-17T00:24:00.000Z"
+  },
+  {
+    "id": "art-148",
+    "title": "Insurance firm reports record quarterly profit",
+    "summary": "The announcement follows months of debate and is expected to affect consumer prices across the region.",
+    "category": "Business",
+    "publishedAt": "2026-08-29T11:42:00.000Z"
+  },
+  {
+    "id": "art-149",
+    "title": "Medical researchers discover new deep-sea species",
+    "summary": "Reaction was mixed, with supporters pointing to gains for climate research and critics urging caution.",
+    "category": "Science",
+    "publishedAt": "2026-08-23T05:54:00.000Z"
+  },
+  {
+    "id": "art-150",
+    "title": "Security researchers launches privacy dashboard",
+    "summary": "The announcement follows months of debate and is expected to affect everyday devices across the region.",
+    "category": "Tech",
+    "publishedAt": "2026-08-13T08:25:00.000Z"
+  },
+  {
+    "id": "art-151",
+    "title": "Physics team grow drought-resistant crop",
+    "summary": "Early figures suggest a measurable shift in climate research, though experts say it is too soon to be sure.",
+    "category": "Science",
+    "publishedAt": "2026-08-12T15:47:00.000Z"
+  },
+  {
+    "id": "art-152",
+    "title": "Geology survey confirm record ice loss",
+    "summary": "Observers called it a turning point for climate research, with further details due in the coming weeks.",
+    "category": "Science",
+    "publishedAt": "2026-09-09T07:12:00.000Z"
+  },
+  {
+    "id": "art-153",
+    "title": "Space agency discover new deep-sea species",
+    "summary": "The announcement follows months of debate and is expected to affect climate research across the region.",
+    "category": "Science",
+    "publishedAt": "2026-09-28T13:09:00.000Z"
+  },
+  {
+    "id": "art-154",
+    "title": "Home side stuns favourites in final",
+    "summary": "Observers called it a turning point for league play, with further details due in the coming weeks.",
+    "category": "Sports",
+    "publishedAt": "2026-10-02T07:04:00.000Z"
+  },
+  {
+    "id": "art-155",
+    "title": "Astronomy group discover new deep-sea species",
+    "summary": "Observers called it a turning point for climate research, with further details due in the coming weeks.",
+    "category": "Science",
+    "publishedAt": "2026-10-10T12:11:00.000Z"
+  },
+  {
+    "id": "art-156",
+    "title": "Nutrition study reports shorter waiting times",
+    "summary": "Early figures suggest a measurable shift in hospital care, though experts say it is too soon to be sure.",
+    "category": "Health",
+    "publishedAt": "2026-08-26T23:18:00.000Z"
+  },
+  {
+    "id": "art-157",
+    "title": "Vaccine programme finds benefit in daily walking",
+    "summary": "Reaction was mixed, with supporters pointing to gains for hospital care and critics urging caution.",
+    "category": "Health",
+    "publishedAt": "2026-07-18T11:55:00.000Z"
+  },
+  {
+    "id": "art-158",
+    "title": "Browser team launches privacy dashboard",
+    "summary": "Observers called it a turning point for everyday devices, with further details due in the coming weeks.",
+    "category": "Tech",
+    "publishedAt": "2026-08-31T20:16:00.000Z"
+  },
+  {
+    "id": "art-159",
+    "title": "Robotics lab releases open data toolkit",
+    "summary": "Reaction was mixed, with supporters pointing to gains for everyday devices and critics urging caution.",
+    "category": "Tech",
+    "publishedAt": "2026-09-18T08:30:00.000Z"
+  },
+  {
+    "id": "art-160",
+    "title": "Clinical trial expands free screening",
+    "summary": "Observers called it a turning point for hospital care, with further details due in the coming weeks.",
+    "category": "Health",
+    "publishedAt": "2026-09-18T21:39:00.000Z"
+  },
+  {
+    "id": "art-161",
+    "title": "Open-source group launches privacy dashboard",
+    "summary": "Observers called it a turning point for everyday devices, with further details due in the coming weeks.",
+    "category": "Tech",
+    "publishedAt": "2026-10-14T03:27:00.000Z"
+  },
+  {
+    "id": "art-162",
+    "title": "Open-source group patches critical flaw",
+    "summary": "Reaction was mixed, with supporters pointing to gains for everyday devices and critics urging caution.",
+    "category": "Tech",
+    "publishedAt": "2026-09-19T14:25:00.000Z"
+  },
+  {
+    "id": "art-163",
+    "title": "Youth academy clinches title in overtime",
+    "summary": "Officials and analysts say the move could have a lasting effect on league play over the next year.",
+    "category": "Sports",
+    "publishedAt": "2026-10-06T04:13:00.000Z"
+  },
+  {
+    "id": "art-164",
+    "title": "Swim champion signs landmark contract",
+    "summary": "Early figures suggest a measurable shift in league play, though experts say it is too soon to be sure.",
+    "category": "Sports",
+    "publishedAt": "2026-09-04T07:13:00.000Z"
+  },
+  {
+    "id": "art-165",
+    "title": "Insurance firm warns of rising costs",
+    "summary": "Observers called it a turning point for consumer prices, with further details due in the coming weeks.",
+    "category": "Business",
+    "publishedAt": "2026-09-29T00:17:00.000Z"
+  },
+  {
+    "id": "art-166",
+    "title": "Car maker plans thousands of new hires",
+    "summary": "Observers called it a turning point for consumer prices, with further details due in the coming weeks.",
+    "category": "Business",
+    "publishedAt": "2026-07-17T14:32:00.000Z"
+  },
+  {
+    "id": "art-167",
+    "title": "Airline group reports record quarterly profit",
+    "summary": "Reaction was mixed, with supporters pointing to gains for consumer prices and critics urging caution.",
+    "category": "Business",
+    "publishedAt": "2026-09-17T06:58:00.000Z"
+  },
+  {
+    "id": "art-168",
+    "title": "Retail chain opens new regional hub",
+    "summary": "Officials and analysts say the move could have a lasting effect on consumer prices over the next year.",
+    "category": "Business",
+    "publishedAt": "2026-07-22T13:00:00.000Z"
+  },
+  {
+    "id": "art-169",
+    "title": "Phone maker releases open data toolkit",
+    "summary": "Early figures suggest a measurable shift in everyday devices, though experts say it is too soon to be sure.",
+    "category": "Tech",
+    "publishedAt": "2026-09-24T18:14:00.000Z"
+  },
+  {
+    "id": "art-170",
+    "title": "Nutrition study finds benefit in daily walking",
+    "summary": "Early figures suggest a measurable shift in hospital care, though experts say it is too soon to be sure.",
+    "category": "Health",
+    "publishedAt": "2026-08-28T03:27:00.000Z"
+  },
+  {
+    "id": "art-171",
+    "title": "Women’s team stuns favourites in final",
+    "summary": "Observers called it a turning point for league play, with further details due in the coming weeks.",
+    "category": "Sports",
+    "publishedAt": "2026-09-23T22:02:00.000Z"
+  },
+  {
+    "id": "art-172",
+    "title": "Retail chain warns of rising costs",
+    "summary": "Early figures suggest a measurable shift in consumer prices, though experts say it is too soon to be sure.",
+    "category": "Business",
+    "publishedAt": "2026-09-02T19:23:00.000Z"
+  },
+  {
+    "id": "art-173",
+    "title": "Space agency publish soil carbon study",
+    "summary": "Officials and analysts say the move could have a lasting effect on climate research over the next year.",
+    "category": "Science",
+    "publishedAt": "2026-09-01T00:46:00.000Z"
+  },
+  {
+    "id": "art-174",
+    "title": "Car maker cuts forecast for next year",
+    "summary": "Officials and analysts say the move could have a lasting effect on consumer prices over the next year.",
+    "category": "Business",
+    "publishedAt": "2026-07-19T05:39:00.000Z"
+  },
+  {
+    "id": "art-175",
+    "title": "Food producer agrees surprise merger",
+    "summary": "Officials and analysts say the move could have a lasting effect on consumer prices over the next year.",
+    "category": "Business",
+    "publishedAt": "2026-09-21T19:19:00.000Z"
+  },
+  {
+    "id": "art-176",
+    "title": "Election board delays vote on budget",
+    "summary": "Reaction was mixed, with supporters pointing to gains for local budgets and critics urging caution.",
+    "category": "Politics",
+    "publishedAt": "2026-07-27T18:03:00.000Z"
+  },
+  {
+    "id": "art-177",
+    "title": "City council delays vote on budget",
+    "summary": "The announcement follows months of debate and is expected to affect local budgets across the region.",
+    "category": "Politics",
+    "publishedAt": "2026-07-27T21:35:00.000Z"
+  },
+  {
+    "id": "art-178",
+    "title": "Veteran captain signs landmark contract",
+    "summary": "Early figures suggest a measurable shift in league play, though experts say it is too soon to be sure.",
+    "category": "Sports",
+    "publishedAt": "2026-07-27T04:33:00.000Z"
+  },
+  {
+    "id": "art-179",
+    "title": "Home side clinches title in overtime",
+    "summary": "Officials and analysts say the move could have a lasting effect on league play over the next year.",
+    "category": "Sports",
+    "publishedAt": "2026-09-21T14:21:00.000Z"
+  },
+  {
+    "id": "art-180",
+    "title": "Rural clinic launches mobile care unit",
+    "summary": "Observers called it a turning point for hospital care, with further details due in the coming weeks.",
+    "category": "Health",
+    "publishedAt": "2026-08-11T11:01:00.000Z"
+  },
+  {
+    "id": "art-181",
+    "title": "Food producer warns of rising costs",
+    "summary": "Officials and analysts say the move could have a lasting effect on consumer prices over the next year.",
+    "category": "Business",
+    "publishedAt": "2026-10-12T22:39:00.000Z"
+  },
+  {
+    "id": "art-182",
+    "title": "Regional bank reports record quarterly profit",
+    "summary": "The announcement follows months of debate and is expected to affect consumer prices across the region.",
+    "category": "Business",
+    "publishedAt": "2026-09-24T11:24:00.000Z"
+  },
+  {
+    "id": "art-183",
+    "title": "Open-source group tests voice assistant upgrade",
+    "summary": "Early figures suggest a measurable shift in everyday devices, though experts say it is too soon to be sure.",
+    "category": "Tech",
+    "publishedAt": "2026-07-24T17:05:00.000Z"
+  },
+  {
+    "id": "art-184",
+    "title": "Physics team map distant galaxy cluster",
+    "summary": "Officials and analysts say the move could have a lasting effect on climate research over the next year.",
+    "category": "Science",
+    "publishedAt": "2026-09-10T06:45:00.000Z"
+  },
+  {
+    "id": "art-185",
+    "title": "City council faces pressure over spending",
+    "summary": "Early figures suggest a measurable shift in local budgets, though experts say it is too soon to be sure.",
+    "category": "Politics",
+    "publishedAt": "2026-09-18T17:16:00.000Z"
+  },
+  {
+    "id": "art-186",
+    "title": "Open-source group unveils faster processor",
+    "summary": "Reaction was mixed, with supporters pointing to gains for everyday devices and critics urging caution.",
+    "category": "Tech",
+    "publishedAt": "2026-10-02T23:54:00.000Z"
+  },
+  {
+    "id": "art-187",
+    "title": "Food producer reports record quarterly profit",
+    "summary": "Observers called it a turning point for consumer prices, with further details due in the coming weeks.",
+    "category": "Business",
+    "publishedAt": "2026-07-26T10:27:00.000Z"
+  },
+  {
+    "id": "art-188",
+    "title": "Home side breaks national record",
+    "summary": "Officials and analysts say the move could have a lasting effect on league play over the next year.",
+    "category": "Sports",
+    "publishedAt": "2026-08-23T23:07:00.000Z"
+  },
+  {
+    "id": "art-189",
+    "title": "Regional bank agrees surprise merger",
+    "summary": "Observers called it a turning point for consumer prices, with further details due in the coming weeks.",
+    "category": "Business",
+    "publishedAt": "2026-10-04T14:11:00.000Z"
+  },
+  {
+    "id": "art-190",
+    "title": "Retail chain cuts forecast for next year",
+    "summary": "Officials and analysts say the move could have a lasting effect on consumer prices over the next year.",
+    "category": "Business",
+    "publishedAt": "2026-08-31T05:47:00.000Z"
+  },
+  {
+    "id": "art-191",
+    "title": "Home side signs landmark contract",
+    "summary": "Reaction was mixed, with supporters pointing to gains for league play and critics urging caution.",
+    "category": "Sports",
+    "publishedAt": "2026-07-18T11:19:00.000Z"
+  },
+  {
+    "id": "art-192",
+    "title": "Medical researchers detect unusual radio signal",
+    "summary": "Observers called it a turning point for climate research, with further details due in the coming weeks.",
+    "category": "Science",
+    "publishedAt": "2026-08-15T13:06:00.000Z"
+  },
+  {
+    "id": "art-193",
+    "title": "Energy supplier plans thousands of new hires",
+    "summary": "Reaction was mixed, with supporters pointing to gains for consumer prices and critics urging caution.",
+    "category": "Business",
+    "publishedAt": "2026-09-04T03:14:00.000Z"
+  },
+  {
+    "id": "art-194",
+    "title": "Nutrition study updates winter guidance",
+    "summary": "The announcement follows months of debate and is expected to affect hospital care across the region.",
+    "category": "Health",
+    "publishedAt": "2026-09-17T12:24:00.000Z"
+  },
+  {
+    "id": "art-195",
+    "title": "Marine biologists map distant galaxy cluster",
+    "summary": "Early figures suggest a measurable shift in climate research, though experts say it is too soon to be sure.",
+    "category": "Science",
+    "publishedAt": "2026-09-25T05:06:00.000Z"
+  },
+  {
+    "id": "art-196",
+    "title": "Women’s team clinches title in overtime",
+    "summary": "Early figures suggest a measurable shift in league play, though experts say it is too soon to be sure.",
+    "category": "Sports",
+    "publishedAt": "2026-08-11T01:00:00.000Z"
+  },
+  {
+    "id": "art-197",
+    "title": "Veteran captain recovers from late injury",
+    "summary": "Observers called it a turning point for league play, with further details due in the coming weeks.",
+    "category": "Sports",
+    "publishedAt": "2026-08-16T19:32:00.000Z"
+  },
+  {
+    "id": "art-198",
+    "title": "Marathon runner recovers from late injury",
+    "summary": "Observers called it a turning point for league play, with further details due in the coming weeks.",
+    "category": "Sports",
+    "publishedAt": "2026-07-19T00:42:00.000Z"
+  },
+  {
+    "id": "art-199",
+    "title": "Marine biologists discover new deep-sea species",
+    "summary": "Reaction was mixed, with supporters pointing to gains for climate research and critics urging caution.",
+    "category": "Science",
+    "publishedAt": "2026-08-08T03:48:00.000Z"
+  },
+  {
+    "id": "art-200",
+    "title": "Botany institute detect unusual radio signal",
+    "summary": "Early figures suggest a measurable shift in climate research, though experts say it is too soon to be sure.",
+    "category": "Science",
+    "publishedAt": "2026-09-02T14:11:00.000Z"
+  },
+  {
+    "id": "art-201",
+    "title": "Swim champion recovers from late injury",
+    "summary": "Officials and analysts say the move could have a lasting effect on league play over the next year.",
+    "category": "Sports",
+    "publishedAt": "2026-09-07T00:01:00.000Z"
+  },
+  {
+    "id": "art-202",
+    "title": "Cloud provider unveils faster processor",
+    "summary": "The announcement follows months of debate and is expected to affect everyday devices across the region.",
+    "category": "Tech",
+    "publishedAt": "2026-07-19T07:02:00.000Z"
+  },
+  {
+    "id": "art-203",
+    "title": "Insurance firm cuts forecast for next year",
+    "summary": "Reaction was mixed, with supporters pointing to gains for consumer prices and critics urging caution.",
+    "category": "Business",
+    "publishedAt": "2026-09-12T01:30:00.000Z"
+  },
+  {
+    "id": "art-204",
+    "title": "Planning authority faces pressure over spending",
+    "summary": "Reaction was mixed, with supporters pointing to gains for local budgets and critics urging caution.",
+    "category": "Politics",
+    "publishedAt": "2026-09-02T00:46:00.000Z"
+  },
+  {
+    "id": "art-205",
+    "title": "Chip maker unveils faster processor",
+    "summary": "Reaction was mixed, with supporters pointing to gains for everyday devices and critics urging caution.",
+    "category": "Tech",
+    "publishedAt": "2026-08-18T00:34:00.000Z"
+  },
+  {
+    "id": "art-206",
+    "title": "Rural clinic reports shorter waiting times",
+    "summary": "Observers called it a turning point for hospital care, with further details due in the coming weeks.",
+    "category": "Health",
+    "publishedAt": "2026-10-11T20:36:00.000Z"
+  },
+  {
+    "id": "art-207",
+    "title": "Phone maker doubles battery life in new model",
+    "summary": "Early figures suggest a measurable shift in everyday devices, though experts say it is too soon to be sure.",
+    "category": "Tech",
+    "publishedAt": "2026-07-26T20:46:00.000Z"
+  },
+  {
+    "id": "art-208",
+    "title": "State legislature faces pressure over spending",
+    "summary": "Observers called it a turning point for local budgets, with further details due in the coming weeks.",
+    "category": "Politics",
+    "publishedAt": "2026-07-28T02:49:00.000Z"
+  },
+  {
+    "id": "art-209",
+    "title": "Health ministry expands free screening",
+    "summary": "The announcement follows months of debate and is expected to affect hospital care across the region.",
+    "category": "Health",
+    "publishedAt": "2026-07-30T05:57:00.000Z"
+  },
+  {
+    "id": "art-210",
+    "title": "Geology survey discover new deep-sea species",
+    "summary": "Reaction was mixed, with supporters pointing to gains for climate research and critics urging caution.",
+    "category": "Science",
+    "publishedAt": "2026-10-01T11:08:00.000Z"
+  },
+  {
+    "id": "art-211",
+    "title": "Rural clinic updates winter guidance",
+    "summary": "The announcement follows months of debate and is expected to affect hospital care across the region.",
+    "category": "Health",
+    "publishedAt": "2026-09-05T18:52:00.000Z"
+  },
+  {
+    "id": "art-212",
+    "title": "State legislature delays vote on budget",
+    "summary": "Early figures suggest a measurable shift in local budgets, though experts say it is too soon to be sure.",
+    "category": "Politics",
+    "publishedAt": "2026-08-25T16:39:00.000Z"
+  },
+  {
+    "id": "art-213",
+    "title": "Transport minister faces pressure over spending",
+    "summary": "Reaction was mixed, with supporters pointing to gains for local budgets and critics urging caution.",
+    "category": "Politics",
+    "publishedAt": "2026-08-14T22:21:00.000Z"
+  },
+  {
+    "id": "art-214",
+    "title": "Geology survey detect unusual radio signal",
+    "summary": "The announcement follows months of debate and is expected to affect climate research across the region.",
+    "category": "Science",
+    "publishedAt": "2026-09-13T09:46:00.000Z"
+  },
+  {
+    "id": "art-215",
+    "title": "Space agency detect unusual radio signal",
+    "summary": "Early figures suggest a measurable shift in climate research, though experts say it is too soon to be sure.",
+    "category": "Science",
+    "publishedAt": "2026-08-13T14:26:00.000Z"
+  },
+  {
+    "id": "art-216",
+    "title": "Budget committee approves new housing plan",
+    "summary": "Early figures suggest a measurable shift in local budgets, though experts say it is too soon to be sure.",
+    "category": "Politics",
+    "publishedAt": "2026-09-14T16:42:00.000Z"
+  },
+  {
+    "id": "art-217",
+    "title": "Regional bank cuts forecast for next year",
+    "summary": "Early figures suggest a measurable shift in consumer prices, though experts say it is too soon to be sure.",
+    "category": "Business",
+    "publishedAt": "2026-07-29T16:35:00.000Z"
+  },
+  {
+    "id": "art-218",
+    "title": "Marine biologists publish soil carbon study",
+    "summary": "The announcement follows months of debate and is expected to affect climate research across the region.",
+    "category": "Science",
+    "publishedAt": "2026-07-22T04:10:00.000Z"
+  },
+  {
+    "id": "art-219",
+    "title": "Pharmacy network finds benefit in daily walking",
+    "summary": "Observers called it a turning point for hospital care, with further details due in the coming weeks.",
+    "category": "Health",
+    "publishedAt": "2026-10-07T23:28:00.000Z"
+  },
+  {
+    "id": "art-220",
+    "title": "Budget committee opens inquiry into contracts",
+    "summary": "Early figures suggest a measurable shift in local budgets, though experts say it is too soon to be sure.",
+    "category": "Politics",
+    "publishedAt": "2026-07-25T00:13:00.000Z"
+  },
+  {
+    "id": "art-221",
+    "title": "Car maker agrees surprise merger",
+    "summary": "The announcement follows months of debate and is expected to affect consumer prices across the region.",
+    "category": "Business",
+    "publishedAt": "2026-10-11T01:52:00.000Z"
+  },
+  {
+    "id": "art-222",
+    "title": "Opposition party delays vote on budget",
+    "summary": "Observers called it a turning point for local budgets, with further details due in the coming weeks.",
+    "category": "Politics",
+    "publishedAt": "2026-07-26T05:06:00.000Z"
+  },
+  {
+    "id": "art-223",
+    "title": "Regional bank warns of rising costs",
+    "summary": "Officials and analysts say the move could have a lasting effect on consumer prices over the next year.",
+    "category": "Business",
+    "publishedAt": "2026-10-03T12:08:00.000Z"
+  },
+  {
+    "id": "art-224",
+    "title": "Sleep researchers reports shorter waiting times",
+    "summary": "Reaction was mixed, with supporters pointing to gains for hospital care and critics urging caution.",
+    "category": "Health",
+    "publishedAt": "2026-08-29T02:21:00.000Z"
+  },
+  {
+    "id": "art-225",
+    "title": "Astronomy group grow drought-resistant crop",
+    "summary": "Reaction was mixed, with supporters pointing to gains for climate research and critics urging caution.",
+    "category": "Science",
+    "publishedAt": "2026-09-15T07:50:00.000Z"
+  },
+  {
+    "id": "art-226",
+    "title": "Nutrition study launches mobile care unit",
+    "summary": "Reaction was mixed, with supporters pointing to gains for hospital care and critics urging caution.",
+    "category": "Health",
+    "publishedAt": "2026-10-07T09:14:00.000Z"
+  },
+  {
+    "id": "art-227",
+    "title": "Retail chain plans thousands of new hires",
+    "summary": "The announcement follows months of debate and is expected to affect consumer prices across the region.",
+    "category": "Business",
+    "publishedAt": "2026-08-14T23:39:00.000Z"
+  },
+  {
+    "id": "art-228",
+    "title": "Regional bank plans thousands of new hires",
+    "summary": "The announcement follows months of debate and is expected to affect consumer prices across the region.",
+    "category": "Business",
+    "publishedAt": "2026-10-11T03:57:00.000Z"
+  },
+  {
+    "id": "art-229",
+    "title": "Health ministry updates winter guidance",
+    "summary": "Reaction was mixed, with supporters pointing to gains for hospital care and critics urging caution.",
+    "category": "Health",
+    "publishedAt": "2026-08-17T03:39:00.000Z"
+  },
+  {
+    "id": "art-230",
+    "title": "Youth academy announces retirement after season",
+    "summary": "The announcement follows months of debate and is expected to affect league play across the region.",
+    "category": "Sports",
+    "publishedAt": "2026-09-13T22:57:00.000Z"
+  },
+  {
+    "id": "art-231",
+    "title": "Health ministry launches mobile care unit",
+    "summary": "Officials and analysts say the move could have a lasting effect on hospital care over the next year.",
+    "category": "Health",
+    "publishedAt": "2026-07-18T05:51:00.000Z"
+  },
+  {
+    "id": "art-232",
+    "title": "Food producer opens new regional hub",
+    "summary": "Early figures suggest a measurable shift in consumer prices, though experts say it is too soon to be sure.",
+    "category": "Business",
+    "publishedAt": "2026-08-10T03:32:00.000Z"
+  },
+  {
+    "id": "art-233",
+    "title": "Youth academy recovers from late injury",
+    "summary": "Early figures suggest a measurable shift in league play, though experts say it is too soon to be sure.",
+    "category": "Sports",
+    "publishedAt": "2026-08-20T10:34:00.000Z"
+  },
+  {
+    "id": "art-234",
+    "title": "Climate scientists grow drought-resistant crop",
+    "summary": "Reaction was mixed, with supporters pointing to gains for climate research and critics urging caution.",
+    "category": "Science",
+    "publishedAt": "2026-09-19T08:29:00.000Z"
+  },
+  {
+    "id": "art-235",
+    "title": "Software startup releases open data toolkit",
+    "summary": "The announcement follows months of debate and is expected to affect everyday devices across the region.",
+    "category": "Tech",
+    "publishedAt": "2026-10-01T22:31:00.000Z"
+  },
+  {
+    "id": "art-236",
+    "title": "Home side recovers from late injury",
+    "summary": "The announcement follows months of debate and is expected to affect league play across the region.",
+    "category": "Sports",
+    "publishedAt": "2026-09-20T08:25:00.000Z"
+  },
+  {
+    "id": "art-237",
+    "title": "Vaccine programme trains hundreds of new nurses",
+    "summary": "Reaction was mixed, with supporters pointing to gains for hospital care and critics urging caution.",
+    "category": "Health",
+    "publishedAt": "2026-09-21T15:21:00.000Z"
+  },
+  {
+    "id": "art-238",
+    "title": "Veteran captain stuns favourites in final",
+    "summary": "Observers called it a turning point for league play, with further details due in the coming weeks.",
+    "category": "Sports",
+    "publishedAt": "2026-07-28T19:13:00.000Z"
+  },
+  {
+    "id": "art-239",
+    "title": "Budget committee delays vote on budget",
+    "summary": "Officials and analysts say the move could have a lasting effect on local budgets over the next year.",
+    "category": "Politics",
+    "publishedAt": "2026-07-23T12:28:00.000Z"
+  },
+  {
+    "id": "art-240",
+    "title": "Car maker reports record quarterly profit",
+    "summary": "The announcement follows months of debate and is expected to affect consumer prices across the region.",
+    "category": "Business",
+    "publishedAt": "2026-09-17T06:33:00.000Z"
+  }
+]

@@ -1,0 +1,66 @@
+.app {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: var(--space-2) var(--space-1);
+}
+
+.app__header {
+  margin-bottom: var(--space-2);
+}
+
+.app__title {
+  margin: 0;
+  font-size: var(--font-size-5);
+  line-height: var(--line-height-tight);
+}
+
+.app__subtitle {
+  margin: 0;
+  color: var(--color-text-muted);
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+  margin-bottom: var(--space-1);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+.field--grow {
+  flex: 1 1 288px;
+}
+
+.field__label {
+  font-size: var(--font-size-1);
+  font-weight: var(--font-weight-bold);
+}
+
+.field__control {
+  min-height: var(--target-size);
+  padding: 0 var(--space-1);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-bg);
+  color: var(--color-text);
+  font: inherit;
+}
+
+.results-count {
+  margin: 0 0 var(--space-1);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-1);
+}
+
+.article-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(var(--card-min-width), 1fr));
+  gap: var(--space-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}

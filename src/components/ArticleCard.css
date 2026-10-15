@@ -1,0 +1,64 @@
+.article-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  padding: var(--space-2);
+  border: var(--border-width) solid var(--color-border-subtle);
+  border-radius: var(--radius);
+  background: var(--color-surface);
+}
+
+.article-card__category {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-1);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.article-card__title {
+  margin: 0;
+  font-size: var(--font-size-3);
+  line-height: var(--line-height-tight);
+}
+
+.article-card__summary {
+  margin: 0;
+  color: var(--color-text-muted);
+}
+
+.article-card__footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-1);
+  margin-top: auto;
+}
+
+.article-card__date {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-1);
+}
+
+.bookmark-button {
+  min-height: var(--target-size);
+  padding: 0 var(--space-1);
+  border: var(--border-width) solid var(--color-text);
+  border-radius: var(--radius);
+  background: var(--color-bg);
+  color: var(--color-text);
+  font: inherit;
+  cursor: pointer;
+}
+
+.bookmark-button:hover {
+  background: var(--color-surface-hover);
+}
+
+/* Pressed state is shown by inverted colors AND a check mark (not color alone). */
+.bookmark-button[aria-pressed='true'] {
+  background: var(--color-inverse-bg);
+  color: var(--color-inverse-text);
+}
