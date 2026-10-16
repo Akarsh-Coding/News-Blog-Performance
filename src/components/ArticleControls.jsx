@@ -7,7 +7,7 @@ import { memo } from 'react'
  */
 function ArticleControls({ searchText, category, sortBy, categories, onSearchChange, onCategoryChange, onSortChange }) {
   return (
-    <div className="controls">
+    <div className="controls" role="search" aria-label="Search and filter articles">
       <div className="field field--grow">
         <label className="field__label" htmlFor="search">
           Search articles

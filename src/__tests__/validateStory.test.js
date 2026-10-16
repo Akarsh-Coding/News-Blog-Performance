@@ -11,7 +11,7 @@ describe('validateStory (custom regex rules)', () => {
     expect(Object.keys(validateStory({ title: '', email: '', summary: '' }))).toEqual(['title', 'email', 'summary'])
   })
 
-  it.each(['priya@example.com', 'first.last+news@sub.example.co.uk', 'a_b-c@mail-server.org'])('accepts email %s', (email) => {
+  it.each(['priya@example.com', 'first.last+news@sub.example.org', 'a_b-c@mail-server.example.net'])('accepts email %s', (email) => {
     expect(validateField('email', email)).toBe('')
   })
 

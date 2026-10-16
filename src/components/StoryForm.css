@@ -19,6 +19,11 @@
   color: var(--color-text-muted);
 }
 
-.story-form .status {
-  margin: 0;
+.story-form__actions {
+  display: flex;
+  flex-direction: column;
+}
+
+.story-form__actions .status {
+  margin: var(--space-1) 0 0;
 }

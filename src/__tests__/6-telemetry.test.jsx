@@ -1,5 +1,5 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest'
-import { waitFor } from '@testing-library/react'
+import { screen, waitFor } from '@testing-library/react'
 import { fillStory, getBookmarkButton, getCategorySelect, getSearchBox, getSortSelect, getStoryFields, renderLoadedApp } from '../test/helpers'
 import { ANALYTICS_MESSAGE, VALID_STORY } from '../test/fixtures'
 
@@ -61,5 +61,29 @@ describe('Telemetry (NFR) — "[Analytics] User interacted with Performance Opti
     const { user } = await renderLoadedApp()
     await user.selectOptions(getCategorySelect(), 'Sports')
     expect(logSpy).toHaveBeenCalledWith(ANALYTICS_MESSAGE)
+  })
+
+  it('does NOT log when the submission fails (the action did not complete)', async () => {
+    const { user } = await renderLoadedApp({ failPost: true })
+    const { submit } = await fillStory(user, VALID_STORY)
+    await user.click(submit)
+    await screen.findByRole('alert')
+    expect(analyticsCount()).toBe(0)
+  })
+
+  it('logs ONLY the fixed message: no search text, titles or emails (no PII in telemetry)', async () => {
+    const { user, releasePost } = await renderLoadedApp({ holdPost: true })
+    await user.click(getSearchBox())
+    await user.paste('climate')
+    await user.click(getBookmarkButton('Senate passes climate bill'))
+    const { submit } = await fillStory(user, VALID_STORY)
+    await user.click(submit)
+    await releasePost()
+    await screen.findByText(/thank/i)
+
+    expect(logSpy.mock.calls.length).toBeGreaterThanOrEqual(3)
+    for (const args of logSpy.mock.calls) {
+      expect(args).toEqual([ANALYTICS_MESSAGE])
+    }
   })
 })

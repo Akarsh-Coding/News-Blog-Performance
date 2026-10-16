@@ -122,4 +122,21 @@ Tension with Prompt 2's "update immediately": the search box echoes instantly bu
 
 ---
 
-<!-- Add Prompt #6 below -->
+### Prompt #6 — NFRs: accessibility, telemetry & security (Green, part 4)
+
+**Phase:** TDD: implement
+
+**Prompt:**
+> Make the remaining NFR tests pass. (1) Accessibility: add ARIA labels and roles to every interactive element (search, filters, sort, bookmark buttons, form fields, retry button), make everything keyboard navigable with visible focus states, use `aria-live` for the loading and empty states, and check contrast against my design tokens. I'm targeting a 100% Lighthouse accessibility score. (2) Telemetry: log `[Analytics] User interacted with Performance Optimization` to the console whenever a primary action completes (search, filter apply, bookmark, form submit). (3) Security: write a sanitization function that strips or escapes XSS payloads from all text inputs before storing them in state, and show me the function. Make sure no API keys or PII are hardcoded anywhere.
+
+**What the AI did:**
+Added `sanitizeText` (removes script/style blocks with content, all tags, script URL schemes, control chars; loops until stable; idempotent) applied before every `setState` of text; `trackInteraction()` called when actions complete (search after the debounce, category, sort, bookmark, successful submit); a persistent `role="status" aria-live="polite"` region for loading / result count / empty state and another in the form (and removed `aria-busy` from ancestors, which would silence them); a skip link, a `role="search"` landmark, a descriptive Retry name. Raised `--gray-400` to `#8a8a8a` because borders were 2.99:1 on the gray surface (needs 3:1). ESLint now forbids `dangerouslySetInnerHTML`, `innerHTML`, `eval`. Added tests: sanitizer (56), token contrast (22), repo secret/PII scan (17), live regions, skip link, more axe states, telemetry edge cases.
+
+**Outcome:** ✅ Worked — all tests pass. Lighthouse itself could not be run in the sandbox (no Chrome); axe-core and token-contrast checks stand in for it.
+
+**Notes / follow-up:**
+Trade-off: a literal `<` or `>` in prose is removed. Client-side sanitizing is defense in depth, not a security boundary: a real backend must validate and encode output too. Run Lighthouse locally (README) to confirm the 100% score.
+
+---
+
+<!-- Add Prompt #7 below -->

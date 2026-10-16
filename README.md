@@ -40,3 +40,20 @@ use plain `fetch` with no delay. Set it to `false` yourself to skip the delay in
 
 Reproduce in the browser with the React DevTools Profiler: enable "Record why each
 component rendered", record one bookmark click, and compare the flamegraph (gray = did not render).
+
+## Accessibility, telemetry and security
+
+- **Accessibility:** labelled controls in a search landmark, a skip link to the story form, persistent polite live regions for loading / result count / "No data found" / form progress, visible `:focus-visible` outlines, 48px touch targets. Token contrast is checked in `contrast.test.js` (text >= 4.5:1, borders and focus ring >= 3:1) and pages are scanned with axe-core.
+- **Telemetry:** `trackInteraction()` logs `[Analytics] User interacted with Performance Optimization` when a primary action completes. It sends no data, so it cannot leak PII.
+- **Security:** every text input goes through `sanitizeText` before it is stored. ESLint forbids `dangerouslySetInnerHTML`, `innerHTML` and `eval`. `no-secrets.test.js` scans the repo for API keys, tokens and PII. `VITE_*` variables are public (bundled into the client): never put secrets in them. Real secrets belong on a server, never in this app.
+
+### Running Lighthouse yourself
+
+```powershell
+$env:VITE_SIMULATE_BACKEND='false'   # skip the simulated 2-3 s load so Lighthouse sees the loaded page
+npm run build
+npm run preview
+```
+
+Open the printed URL in Chrome, then DevTools -> Lighthouse -> Accessibility -> Analyze.
+Also run a *Snapshot* after triggering the error state (`/?simulate=error`) and after a failed form submit.

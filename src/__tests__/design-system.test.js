@@ -40,6 +40,15 @@ describe('Design system (ticket: no rogue colors, consistent 16px/32px spacing)'
     }
   })
 
+  it.each(cssSources)('%s never removes the focus outline (visible focus is required)', (_path, css) => {
+    expect(css).not.toMatch(/outline\s*:\s*(?:none|0)\b/)
+  })
+
+  it('defines a global :focus-visible style for every interactive element', () => {
+    const base = sources.find(([path]) => path.endsWith('index.css'))[1]
+    expect(base).toMatch(/:focus-visible\s*\{[^}]*outline:\s*var\(--focus-width\)/)
+  })
+
   it.each(cssSources)('%s takes every font-size from the type scale', (_path, css) => {
     for (const [, , value] of declarations(css, 'font-size')) {
       expect(value.trim()).toMatch(/^var\(--font-size-\d+\)$/)

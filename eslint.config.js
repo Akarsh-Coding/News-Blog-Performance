@@ -37,6 +37,18 @@ export default [
         { vars: 'all', varsIgnorePattern: '^_', args: 'after-used', argsIgnorePattern: '^_' },
       ],
       'react/prop-types': 'off',
+
+      // Security: never bypass React's output escaping.
+      'react/no-danger': 'error',
+      'no-eval': 'error',
+      'no-implied-eval': 'error',
+      'no-new-func': 'error',
+      'no-restricted-properties': [
+        'error',
+        { property: 'innerHTML', message: 'Use React rendering; innerHTML bypasses escaping.' },
+        { property: 'outerHTML', message: 'Use React rendering; outerHTML bypasses escaping.' },
+        { property: 'insertAdjacentHTML', message: 'Use React rendering; it bypasses escaping.' },
+      ],
     },
   },
   {

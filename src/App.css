@@ -158,3 +158,20 @@
     top: var(--space-1);
   }
 }
+
+/* Skip link: first Tab stop, hidden until focused. */
+.skip-link {
+  position: absolute;
+  top: var(--space-1);
+  left: var(--space-1);
+  z-index: 1;
+  padding: var(--space-1);
+  border-radius: var(--radius);
+  background: var(--color-inverse-bg);
+  color: var(--color-inverse-text);
+  transform: translateY(-200%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}

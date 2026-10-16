@@ -15,7 +15,7 @@
   --gray-50: #f6f6f6;
   --gray-100: #ebebeb;
   --gray-200: #d6d6d6;
-  --gray-400: #8f8f8f; /* 3.2:1 on white: OK for UI borders */
+  --gray-400: #8a8a8a; /* >= 3:1 on white AND on gray-50: UI borders */
   --gray-700: #4d4d4d; /* 8.5:1 on white: OK for body text */
   --gray-900: #141414;
 

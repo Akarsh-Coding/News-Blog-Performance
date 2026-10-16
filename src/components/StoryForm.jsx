@@ -1,5 +1,7 @@
 import { memo, useState } from 'react'
 import { submitStory } from '../api/newsApi'
+import { trackInteraction } from '../utils/analytics'
+import { sanitizeText } from '../utils/sanitizeText'
 import { FIELD_ORDER, validateField, validateStory } from '../utils/validateStory'
 import './StoryForm.css'
 
@@ -44,7 +46,8 @@ function StoryForm() {
   const isSubmitting = submitStatus === 'submitting'
 
   function handleChange(event) {
-    const { name, value } = event.target
+    const { name } = event.target
+    const value = sanitizeText(event.target.value) // never store markup
     setValues((previous) => ({ ...previous, [name]: value }))
     // Once a field is flagged, re-check it as the user types so the error clears when fixed.
     if (errors[name]) {
@@ -81,13 +84,14 @@ function StoryForm() {
       })
       setValues(EMPTY_VALUES)
       setSubmitStatus('success')
+      trackInteraction() // only when the submission actually completed
     } catch {
       setSubmitStatus('error')
     }
   }
 
   return (
-    <form className="story-form" aria-labelledby="story-form-heading" aria-busy={isSubmitting} noValidate onSubmit={handleSubmit}>
+    <form className="story-form" aria-labelledby="story-form-heading" noValidate onSubmit={handleSubmit}>
       <h2 id="story-form-heading" className="story-form__heading">
         Submit a story
       </h2>
@@ -115,25 +119,23 @@ function StoryForm() {
         onChange={handleChange}
       />
 
-      <button type="submit" className="button" disabled={isSubmitting}>
-        Submit story
-      </button>
+      <div className="story-form__actions">
+        <button type="submit" className="button" disabled={isSubmitting}>
+          Submit story
+        </button>
 
-      {submitStatus === 'submitting' && (
-        <p role="status" className="status">
-          Submitting your story…
-        </p>
-      )}
-      {submitStatus === 'success' && (
-        <p role="status" className="status">
-          Thank you! Your story was submitted for review.
-        </p>
-      )}
-      {submitStatus === 'error' && (
-        <p role="alert" className="status status--error">
-          We couldn’t submit your story. What you typed is still here, so you can try again.
-        </p>
-      )}
+        {/* Persistent polite live region (exists before any message), so progress is announced. */}
+        <div role="status" aria-live="polite" aria-atomic="true">
+          {submitStatus === 'submitting' && <p className="status">Submitting your story…</p>}
+          {submitStatus === 'success' && <p className="status">Thank you! Your story was submitted for review.</p>}
+        </div>
+
+        {submitStatus === 'error' && (
+          <p role="alert" className="status status--error">
+            We couldn’t submit your story. What you typed is still here, so you can try again.
+          </p>
+        )}
+      </div>
     </form>
   )
 }

@@ -32,10 +32,10 @@ afterEach(() => {
 describe('Simulated 3G backend (end to end)', () => {
   it('shows "Loading articles…" for 2-3 seconds, then all 240 articles', async () => {
     await renderSimulatedApp()
-    expect(screen.getByRole('status')).toHaveTextContent(/loading articles/i)
+    expect(screen.getByText(/loading articles/i)).toBeVisible()
 
     await advance(2400)
-    expect(screen.getByRole('status')).toHaveTextContent(/loading articles/i)
+    expect(screen.getByText(/loading articles/i)).toBeVisible()
     expect(screen.queryAllByRole('listitem')).toHaveLength(0)
 
     await advance(100)
@@ -49,7 +49,7 @@ describe('Simulated 3G backend (end to end)', () => {
     expect(screen.getByRole('alert')).toHaveTextContent(/load the articles/i)
 
     fireEvent.click(screen.getByRole('button', { name: /retry/i }))
-    expect(screen.getByRole('status')).toHaveTextContent(/loading articles/i)
+    expect(screen.getByText(/loading articles/i)).toBeVisible()
 
     await advance(2500)
     expect(screen.getAllByRole('listitem')).toHaveLength(240)

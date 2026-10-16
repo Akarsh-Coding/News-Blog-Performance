@@ -94,4 +94,16 @@ describe('Search debounce (300 ms)', () => {
     fireEvent.change(screen.getByRole('combobox', { name: /sort/i }), { target: { value: 'oldest' } })
     expect(titles()).toEqual(['Startup raises record funding', 'New chip doubles battery life'])
   })
+  it('telemetry: ONE analytics event for a burst of keystrokes, fired when the search is applied', async () => {
+    const logSpy = vi.spyOn(console, 'log').mockImplementation(() => {})
+    const count = () => logSpy.mock.calls.filter(([message]) => /\[Analytics\]/.test(message)).length
+    await renderWithDebounce()
+
+    for (const text of ['c', 'ch', 'chi', 'chip']) type(text)
+    await advance(299)
+    expect(count()).toBe(0) // still typing: nothing completed yet
+
+    await advance(1)
+    expect(count()).toBe(1)
+  })
 })
