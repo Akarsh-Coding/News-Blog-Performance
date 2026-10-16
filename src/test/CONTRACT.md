@@ -4,15 +4,17 @@ The tests were written first, so they pin down these seams. Paste this section
 into the Green-phase prompts. Change a test only if the *spec* is wrong, never to
 make an implementation pass.
 
-_Revision 2: the placeholder "Submit a tip" form was replaced by the "Submit a Story" form from the Prompt 4 spec._
+_Revision 3: the placeholder "Submit a tip" form became the "Submit a Story" form (Prompt 4); search is now debounced (Prompt 5)._
 
 ## Modules
 | Path | Export | Notes |
 | --- | --- | --- |
 | `src/App.jsx` | default `App` | Root component. Tests render `<App />` with no props. |
-| `src/components/ArticleCard.jsx` | default `ArticleCard` | Must be `React.memo(...)`. Props: `article`, `isBookmarked`, `onToggleBookmark(id)`. Renders its own `<li>` containing an `<h2>` title, summary, category, and the bookmark button. |
+| `src/components/ArticleCard.jsx` | default `ArticleCard` | `React.memo(...)`. Props: `article`, `isBookmarked`, `onToggleBookmark(id)`. Renders its own `<li>` containing an `<h2>` title, summary, category, and the bookmark button. |
 | `src/utils/filterArticles.js` | named `filterAndSortArticles(articles, { query, category, sortBy })` | Pure, non-mutating. Defaults: `query=''`, `category='all'`, `sortBy='newest'`. `query` is trimmed and matched case-insensitively against title **or** summary. `sortBy`: `newest` \| `oldest` \| `title` (A–Z). |
 | `src/utils/validateStory.js` | `validateField(name, value)`, `validateStory(values)` | Regex rules, see "Story form". |
+| `src/components/ArticleControls.jsx`, `src/components/StoryForm.jsx` | default exports | Both `React.memo`; controls receive stable `useCallback` handlers and a `useMemo`'d `categories` array. |
+| `src/hooks/useDebouncedValue.js` | named `useDebouncedValue(value, delayMs)` | Delay 0 = pass-through. |
 | `src/api/newsApi.js` | `loadArticles({ attempt, simulate, failureMode })`, `submitStory(story, { simulate, failureMode })` | Simulated 2–3 s latency when `simulate` is on (default unless `VITE_SIMULATE_BACKEND=false`; the test run sets it to `false`). |
 
 ## Network (tests stub global `fetch` only)
@@ -23,7 +25,7 @@ _Revision 2: the placeholder "Submit a tip" form was replaced by the "Submit a S
 ## UI (queried by role + accessible name)
 - One `<h1>`.
 - `searchbox` named "Search articles"; `combobox` named "Category" (option values: `all` + categories from the data); `combobox` named "Sort by" (values: `newest`, `oldest`, `title`).
-- `region` named "Articles" containing a `<ul>` of cards. Filtering/sorting/search update **synchronously** (no debounce).
+- `region` named "Articles" containing a `<ul>` of cards. Category and sort update **synchronously**. Search: the input echoes instantly; the list follows after the debounce (`VITE_SEARCH_DEBOUNCE_MS`, default 300 ms). The test run sets it to `0` so those assertions stay synchronous; `10-search-debounce.test.jsx` turns the real 300 ms on.
 - Bookmark: `button` named exactly `Bookmark <title>` with `aria-pressed="true|false"` (name never changes; state is in `aria-pressed`).
 - **Empty result** (loaded, zero matches, or API returned `[]`): text matching /no data found/i inside a `role="status"`; search/filters stay on screen.
 - **Loading** (initial fetch, Retry, and story POST): `role="status"` whose text matches /loading|submitting|sending|saving/i. While loading: no "No data found", no error, no articles.
@@ -35,4 +37,4 @@ _Revision 2: the placeholder "Submit a tip" form was replaced by the "Submit a S
   - While POST is pending: loading indicator, submit `disabled`, no duplicate POSTs. Success: text matching /thank/i and the form empties. Failure: `role="alert"` mentioning "submit your story", typed values kept, button re-enabled.
 - Sanitization: every text input (search, title, email, summary) strips/escapes `<` and `>` **before** setting state; ordinary text is untouched. _(not implemented yet)_
 - Telemetry: `console.log('[Analytics] User interacted with Performance Optimization')` after search, category change, sort change, each bookmark toggle, and a *successful* story submit. Never on load; never on blocked submit. _(not implemented yet)_
-- Performance: cards receive stable props (`useCallback` handler), so toggling one bookmark re-renders no other card; `filterAndSortArticles` runs inside `useMemo` keyed only on `[articles, query, category, sortBy]`. _(not implemented yet)_
+- Performance _(implemented)_: cards receive stable props (`useCallback` handler, same article objects) and are `React.memo`'d, so toggling one bookmark re-renders no other card; `filterAndSortArticles` runs inside `useMemo` keyed only on `[articles, query, category, sortBy]`.

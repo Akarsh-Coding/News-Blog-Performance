@@ -1,9 +1,10 @@
+import { memo } from 'react'
 import './ArticleCard.css'
 
 const formatDate = (iso) =>
   new Date(iso).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric', timeZone: 'UTC' })
 
-export default function ArticleCard({ article, isBookmarked, onToggleBookmark }) {
+function ArticleCard({ article, isBookmarked, onToggleBookmark }) {
   return (
     <li className="article-card">
       <p className="article-card__category">{article.category}</p>
@@ -28,3 +29,7 @@ export default function ArticleCard({ article, isBookmarked, onToggleBookmark })
     </li>
   )
 }
+
+// Memoized: with stable props (same article object, stable handler) a card does not
+// re-render when the list around it changes.
+export default memo(ArticleCard)

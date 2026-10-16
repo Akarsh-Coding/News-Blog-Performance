@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { memo, useState } from 'react'
 import { submitStory } from '../api/newsApi'
 import { FIELD_ORDER, validateField, validateStory } from '../utils/validateStory'
 import './StoryForm.css'
@@ -36,7 +36,7 @@ function Field({ id, name, label, error, multiline = false, ...controlProps }) {
   )
 }
 
-export default function StoryForm() {
+function StoryForm() {
   const [values, setValues] = useState(EMPTY_VALUES)
   const [errors, setErrors] = useState({})
   const [submitStatus, setSubmitStatus] = useState('idle') // idle | submitting | success | error
@@ -137,3 +137,5 @@ export default function StoryForm() {
     </form>
   )
 }
+
+export default memo(StoryForm)

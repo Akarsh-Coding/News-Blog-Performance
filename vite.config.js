@@ -9,7 +9,8 @@ export default defineConfig({
     globals: true,
     setupFiles: './src/test/setup.js',
     css: true,
-    // Tests use the plain fetch path: no simulated 2-3 s latency.
-    env: { VITE_SIMULATE_BACKEND: 'false' },
+    // Tests use the plain fetch path (no simulated 2-3 s latency) and no search
+    // debounce, so assertions can stay synchronous. Debounce has its own tests.
+    env: { VITE_SIMULATE_BACKEND: 'false', VITE_SEARCH_DEBOUNCE_MS: '0' },
   },
 })

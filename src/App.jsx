@@ -1,18 +1,26 @@
-import { useEffect, useState } from 'react'
+import { useCallback, useEffect, useMemo, useState } from 'react'
 import { loadArticles } from './api/newsApi'
 import ArticleCard from './components/ArticleCard'
+import ArticleControls from './components/ArticleControls'
 import StoryForm from './components/StoryForm'
+import { useDebouncedValue } from './hooks/useDebouncedValue'
 import { filterAndSortArticles } from './utils/filterArticles'
 import './App.css'
+
+// A burst of keystrokes recomputes the list once, after typing pauses.
+// Tests set this to 0 so their assertions can stay synchronous.
+const SEARCH_DEBOUNCE_MS = Number(import.meta.env.VITE_SEARCH_DEBOUNCE_MS ?? 300)
 
 export default function App() {
   const [articles, setArticles] = useState([])
   const [status, setStatus] = useState('loading') // loading | success | error
   const [attempt, setAttempt] = useState(0)
-  const [query, setQuery] = useState('')
+  const [searchText, setSearchText] = useState('') // what the input shows: updates instantly
   const [category, setCategory] = useState('all')
   const [sortBy, setSortBy] = useState('newest')
   const [bookmarkedIds, setBookmarkedIds] = useState(() => new Set())
+
+  const query = useDebouncedValue(searchText, SEARCH_DEBOUNCE_MS) // what filtering uses: settles after a pause
 
   useEffect(() => {
     let cancelled = false
@@ -35,17 +43,28 @@ export default function App() {
     setAttempt((count) => count + 1)
   }
 
-  const categories = [...new Set(articles.map((article) => article.category))].sort()
-  const visibleArticles = filterAndSortArticles(articles, { query, category, sortBy })
+  // Derived data: recomputed only when its real inputs change (not when a bookmark
+  // is toggled or the story form is typed into).
+  const categories = useMemo(() => [...new Set(articles.map((article) => article.category))].sort(), [articles])
+  const visibleArticles = useMemo(
+    () => filterAndSortArticles(articles, { query, category, sortBy }),
+    [articles, query, category, sortBy],
+  )
 
-  function toggleBookmark(id) {
+  // Stable handlers: same function identity on every render, so memoized children
+  // receiving them are not forced to re-render. (Setters use the functional form
+  // where needed, so no dependencies are required.)
+  const handleSearchChange = useCallback((event) => setSearchText(event.target.value), [])
+  const handleCategoryChange = useCallback((event) => setCategory(event.target.value), [])
+  const handleSortChange = useCallback((event) => setSortBy(event.target.value), [])
+  const toggleBookmark = useCallback((id) => {
     setBookmarkedIds((previous) => {
       const next = new Set(previous)
       if (next.has(id)) next.delete(id)
       else next.add(id)
       return next
     })
-  }
+  }, [])
 
   return (
     <main className="app">
@@ -56,50 +75,15 @@ export default function App() {
 
       <div className="layout">
         <div className="layout__main">
-          <div className="controls">
-            <div className="field field--grow">
-              <label className="field__label" htmlFor="search">
-                Search articles
-              </label>
-              <input
-                id="search"
-                type="search"
-                className="field__control"
-                value={query}
-                onChange={(event) => setQuery(event.target.value)}
-              />
-            </div>
-
-            <div className="field">
-              <label className="field__label" htmlFor="category">
-                Category
-              </label>
-              <select
-                id="category"
-                className="field__control"
-                value={category}
-                onChange={(event) => setCategory(event.target.value)}
-              >
-                <option value="all">All categories</option>
-                {categories.map((name) => (
-                  <option key={name} value={name}>
-                    {name}
-                  </option>
-                ))}
-              </select>
-            </div>
-
-            <div className="field">
-              <label className="field__label" htmlFor="sort">
-                Sort by
-              </label>
-              <select id="sort" className="field__control" value={sortBy} onChange={(event) => setSortBy(event.target.value)}>
-                <option value="newest">Newest first</option>
-                <option value="oldest">Oldest first</option>
-                <option value="title">Title (A–Z)</option>
-              </select>
-            </div>
-          </div>
+          <ArticleControls
+            searchText={searchText}
+            category={category}
+            sortBy={sortBy}
+            categories={categories}
+            onSearchChange={handleSearchChange}
+            onCategoryChange={handleCategoryChange}
+            onSortChange={handleSortChange}
+          />
 
           {status === 'success' && (
             <p className="results-count">

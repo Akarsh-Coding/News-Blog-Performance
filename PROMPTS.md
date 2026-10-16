@@ -105,4 +105,21 @@ Test env sets `VITE_SIMULATE_BACKEND=false` so the suite has no real delays; the
 
 ---
 
-<!-- Add Prompt #5 below -->
+### Prompt #5 — Performance optimization (Green, part 3)
+
+**Phase:** TDD: implement / optimize
+
+**Prompt:**
+> Now apply the performance constraint. Wrap the expensive filter/search/sort computation in `useMemo` with correct dependencies. Stabilize every handler passed to child components (bookmark toggle, filter change, search change) with `useCallback`. Wrap the article card component in `React.memo` so the stabilized props actually prevent re-renders. Also debounce the search input so it doesn't recompute on every keystroke. Make the performance tests from Part 2 pass, then explain in one short paragraph why `useCallback` alone wouldn't prevent re-renders without `React.memo`, and show me how to confirm the improvement in the React DevTools Profiler (before versus after).
+
+**What the AI did:**
+Measured the baseline first (real 240 articles, temporary render counters). Then: `useMemo` for `visibleArticles` (deps `[articles, query, category, sortBy]`) and `categories` (`[articles]`); `useCallback` for the search, category, sort and bookmark handlers; `React.memo` on `ArticleCard`, plus `ArticleControls` (extracted so the filter/search handlers feed a memoized child) and `StoryForm`; `useDebouncedValue` hook (300 ms) for search while the input echoes instantly. Added unit tests for the hook and an integration test of the real 300 ms debounce.
+
+**Outcome:** ✅ Worked — all 8 performance tests and the `React.memo` test pass. Measured: toggling one bookmark 240 -> 1 card renders; changing sort 240 -> 0; typing "tech" 422 -> 0; filter runs for a 4-key burst 4 -> 1 (with debounce).
+
+**Notes / follow-up:**
+Tension with Prompt 2's "update immediately": the search box echoes instantly but the list now follows ~300 ms after typing pauses (category/sort stay instant). The test run sets the debounce to 0 (`vite.config.js`) so older assertions stay synchronous. Remaining red: telemetry (6) and sanitization (8).
+
+---
+
+<!-- Add Prompt #6 below -->
