@@ -1,59 +1,105 @@
-# News Blog — Performance Optimization (ENG-84718)
+# News Explorer
 
-React + Vite. Built with a test-first, AI-assisted workflow; see `PROMPTS.md`.
+An accessible, high-performance React app for browsing 240 news articles: search, filter by category, sort, bookmark, and submit your own story. Built test-first around rendering performance, resilience on slow or failing networks, and accessibility.
 
-## Scripts
+**Live demo:** _add your Vercel URL here_ &nbsp;·&nbsp; **Ticket:** ENG-84718
+
+## Features
+
+- **Find articles fast:** case-insensitive search (title and summary), category filter, and sorting by newest, oldest or title. Bookmark any article.
+- **Resilient by design:** a loading indicator on slow connections, a friendly "No data found" state, and an error message with a **Retry** button when a request fails.
+- **Submit a story:** a form with custom regex validation, red inline errors, and no double submissions.
+- **Accessible:** keyboard-operable, visible focus, screen-reader live regions, and WCAG AA contrast.
+- **Safe:** all text input is sanitized before it is stored; no secrets or personal data are shipped.
+
+## Tech stack
+
+React 19 · Vite 8 · Vitest 5 · React Testing Library · jest-axe · ESLint 9 · plain CSS with design tokens
+
+## Getting started
+
+Requires **Node 22.22.2 or newer** (needed by the test toolchain).
+
+```bash
+npm install
+npm run dev        # http://localhost:5173
+```
 
 | Command | Purpose |
 | --- | --- |
 | `npm run dev` | Start the dev server |
-| `npm run build` | Production build |
-| `npm test` | Run the Vitest suite once |
-| `npm run test:watch` | Vitest in watch mode |
-| `npm run lint` | ESLint (fails on any warning) |
+| `npm run build` | Production build into `dist/` |
+| `npm run preview` | Serve the production build locally |
+| `npm test` | Run the full test suite once |
+| `npm run test:watch` | Tests in watch mode |
+| `npm run lint` | ESLint, failing on any warning |
+| `npm run generate:articles` | Regenerate the 240 mock articles (`public/articles.json`) |
 
-## Simulated slow / failing network
+## Configuration
 
-By default (`npm run dev`, deployed demo) every request behaves like a slow 3G
-connection: articles take **2–3 seconds** to load and a "Loading articles…"
-indicator is shown. Trigger failures from the URL:
+By default, requests behave like a slow connection: articles take **2–3 seconds** to load behind a "Loading articles…" indicator. Failures can be triggered from the URL:
 
 | URL | Behaviour |
 | --- | --- |
-| `/?simulate=error` | First article load fails with a **Retry** button; Retry succeeds |
+| `/?simulate=error` | The first article load fails; **Retry** then succeeds |
 | `/?simulate=offline` | Every request fails (articles and story submission) |
 
-Tests run with `VITE_SIMULATE_BACKEND=false` (set in `vite.config.js`) so they
-use plain `fetch` with no delay. Set it to `false` yourself to skip the delay in dev.
-
-## Performance
-
-- `useMemo` for the filtered/sorted list and the category list; `useCallback` for every handler passed to a child; `React.memo` on `ArticleCard`, `ArticleControls` and `StoryForm`.
-- Search is debounced (300 ms by default; `VITE_SEARCH_DEBOUNCE_MS=0` disables it). The input itself still updates on every keystroke.
-- Measured on the 240-article dataset (React render counts, per user action):
-
-| Action | Card renders before → after | Filter runs before → after |
+| Variable | Default | Effect |
 | --- | --- | --- |
-| Toggle one bookmark | 240 → 1 | 1 → 0 |
-| Change sort order | 240 → 0 | 1 → 1 |
-| Type "tech" in search (4 keystrokes) | 422 → 0 | 4 → 1 (with the 300 ms debounce) |
+| `VITE_SIMULATE_BACKEND` | `true` | `false` removes the simulated delay and failures (the test run uses this) |
+| `VITE_SEARCH_DEBOUNCE_MS` | `300` | Search debounce; `0` disables it |
 
-Reproduce in the browser with the React DevTools Profiler: enable "Record why each
-component rendered", record one bookmark click, and compare the flamegraph (gray = did not render).
+`VITE_*` variables are bundled into the client and are therefore public. Never put secrets in them (see `.env.example`).
 
-## Accessibility, telemetry and security
+## Engineering highlights
 
-- **Accessibility:** labelled controls in a search landmark, a skip link to the story form, persistent polite live regions for loading / result count / "No data found" / form progress, visible `:focus-visible` outlines, 48px touch targets. Token contrast is checked in `contrast.test.js` (text >= 4.5:1, borders and focus ring >= 3:1) and pages are scanned with axe-core.
-- **Telemetry:** `trackInteraction()` logs `[Analytics] User interacted with Performance Optimization` when a primary action completes. It sends no data, so it cannot leak PII.
-- **Security:** every text input goes through `sanitizeText` before it is stored. ESLint forbids `dangerouslySetInnerHTML`, `innerHTML` and `eval`. `no-secrets.test.js` scans the repo for API keys, tokens and PII. `VITE_*` variables are public (bundled into the client): never put secrets in them. Real secrets belong on a server, never in this app.
+**Performance.** `useMemo` for the filtered list, `useCallback` for every handler passed to a child, and `React.memo` on `ArticleCard`, `ArticleControls` and `StoryForm`. Search is debounced; the input still echoes every keystroke instantly. Measured on the 240-article dataset (React render counts per action):
 
-### Running Lighthouse yourself
+| Action | Card renders | Filter runs |
+| --- | --- | --- |
+| Toggle one bookmark | 240 → **1** | 1 → **0** |
+| Change sort order | 240 → **0** | 1 → 1 |
+| Type "tech" in search (4 keystrokes) | 422 → **0** | 4 → **1** (with debounce) |
 
-```powershell
-$env:VITE_SIMULATE_BACKEND='false'   # skip the simulated 2-3 s load so Lighthouse sees the loaded page
-npm run build
-npm run preview
+To reproduce, record a React DevTools Profiler session with "Record why each component rendered" enabled and click one bookmark: only that card renders.
+
+**Accessibility.** Controls sit in a labelled search landmark; a skip link jumps past the 240 bookmark buttons to the form; loading, result counts, "No data found" and form progress are announced through persistent `aria-live` regions; focus outlines are never removed; touch targets are 48 px. Colour contrast is computed from the design tokens in a test (text ≥ 4.5:1, borders and focus ring ≥ 3:1), and every page state is scanned with axe-core.
+
+**Security.** `sanitizeText` removes markup and script payloads (including nested, obfuscated ones) before any text reaches state. ESLint forbids `dangerouslySetInnerHTML`, `innerHTML` and `eval`. A repository scan test checks for API keys, tokens and personal data.
+
+**Telemetry.** `[Analytics] User interacted with Performance Optimization` is logged when a primary action completes (search applied, filter or sort changed, bookmark toggled, story submitted). It carries no payload, so it cannot leak personal data.
+
+## Testing
+
+`npm test` runs **276 tests in 20 files**, written before the implementation:
+
+- **Acceptance:** happy path, empty state, bad connectivity, invalid input.
+- **Non-functional:** accessibility (axe-core and keyboard), telemetry, security, render performance.
+- **Unit:** filtering and sorting, validation rules, the sanitizer, network timing (fake timers), the debounce hook.
+- **Guards:** design tokens (no hardcoded colours, spacing and type from the scale), WCAG contrast, dataset size, and no secrets or PII in the repo.
+
+## Project structure
+
+```
+public/articles.json        240 generated mock articles
+scripts/                    article generator
+src/
+  api/newsApi.js            simulated network layer (latency, failures)
+  components/               ArticleCard, ArticleControls, StoryForm
+  hooks/                    useDebouncedValue
+  styles/tokens.css         design tokens (the only file with raw colours)
+  utils/                    filtering, validation, sanitizer, analytics
+  __tests__/                test suites
+  test/                     test helpers and the written test contract
 ```
 
-Open the printed URL in Chrome, then DevTools -> Lighthouse -> Accessibility -> Analyze.
-Also run a *Snapshot* after triggering the error state (`/?simulate=error`) and after a failed form submit.
+
+## Known limitations
+
+- There is no backend: the simulated server accepts submitted stories but does not store them, and bookmarks live in memory only (a refresh clears them).
+- The sanitizer removes `<` and `>` characters, even in ordinary prose. It is defense in depth, not a replacement for server-side validation.
+- The Lighthouse score has not been recorded here; see `VERIFICATION.md`.
+
+## Development log
+
+`PROMPTS.md` records the sequence of prompts, the test-first (red → green → optimize) progression, and the iterations along the way.
